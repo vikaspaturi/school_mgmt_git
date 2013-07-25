@@ -264,21 +264,33 @@ border-radius: 2px;
 
 /**start@@code for the college updates*/
 .app .collegeUpdates li{
-	border:1px solid #FF9C84;
-	padding:20px 20px 20px 40px;
-	background:#fff;
-	color: #1F4237;
+	border:1px solid #b5aea9;
+	padding:18px;
+	background:url(images/noise.png) #fff;
+	color: #666666;
 	position: relative;
-	margin: 10px 20px 20px 0;
-	-moz-border-radius:4px;
+	margin: 10px 20px 40px 0;
+	font-size: 14px;
+	/*-moz-border-radius:4px;
 	-webkit-border-radius:4px;
-	border-radius:4px;
+	border-radius:4px;*/
+	-moz-box-shadow: 4px 4px 4px #919090;
+	-webkit-box-shadow: 4px 4px 4px #919090;
+	box-shadow: 4px 4px 4px #919090
 }
-.app .collegeUpdates li img{ 
+.app .collegeUpdates li img.upd_std{ 
 	position: absolute;
-	left: 10px;
-	top: 12px
+	left: -8px;
+	top: -24px;
 }
+.app .post_date{ 
+	color: #AA814C;
+	left: auto;
+	right: 10px;
+	top: 2px;;
+	font-size: 13px;
+}
+.app .post_date span{ font-style: italic; color: #D3B185}
 /**End@@code for the college updates*/
 
 .app .uploadifyQueue .completed, .app .uploadifyQueueItem  {

@@ -3,7 +3,9 @@
         foreach($notice_board as $v){
     ?>
     <li>
-        <img src="<?php echo base_url(); ?>css/images/user-upd.png" alt="user"/><?php echo $v->message; ?>
+        <img src="<?php echo base_url(); ?>css/images/pushpin_pink.png" class="upd_std" alt="user"/>
+        <?php echo $v->message; ?>
+        <div class="post_date p_a"><span>Posted on: </span> <?php echo dateFormat($v->date_added, 'd-M-y'); ?> </div>
     </li>
     <?php
         }
