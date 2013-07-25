@@ -1,0 +1,295 @@
+/* CSS Resets */
+.app {background: url(images/fabric-patterns.png) repeat}
+.app .header{
+	height: 42px;
+	background: url(images/noise.png) #1d2837 repeat;
+	border-bottom: 1px solid #0B1B30;
+	position: fixed;
+	left: 0;
+	right: 0;
+	color: #fff;
+        z-index: 100;
+}
+.app .logo_inner{ 
+	left: 10px; 
+	top: 6px; 
+	background: url(images/logo-head.png) no-repeat; 
+	width: 32px; 
+	height: 32px
+}
+.app .app_title{ 
+	color: #FFF;
+	font-size: 24px;
+	left: 50px;
+	top: 14px;
+	text-shadow: 0 1px 0 #444;
+}
+.app .app_interaction{ right: 10px; }
+.app .app_interaction a{ 
+	padding: 14px 10px 11px;
+	border-left: 1px solid #68707C;
+	border-right: 1px solid #1C2024;
+	color: #dedede;
+	cursor: pointer;
+}
+.app .app_interaction a:hover{ color: #fff}
+.app .app_interaction a:active{ color: #f5f5f5}
+.app .app_interaction a.first{ border-left: 0}
+.app .app_interaction a.last{ border-right: 0}
+.app .app_interaction a.logout{ 
+	background: url(images/logout.png) no-repeat 0 0;
+	background-position: 12px 14px;
+	width: 16px;
+	height: 16px;
+	margin-top: 2px;
+	text-indent: -9999px
+}
+.app .app_interaction a.logout:hover{background-position: 12px -36px;}
+.app .app_interaction a.logout:active{background-position: 12px -86px;}
+.app .app_interaction a.logged_user{ padding-left: 30px}
+.app .icon{ 
+	background: url(images/bgic.png) no-repeat;
+	display: inline-block;
+}
+.app .usr_ico{
+	width: 16px;
+	height: 16px;
+	left: 10px
+}
+.app .app_interaction a.logged_user:hover .usr_ico{ background-position:  0 -100px}
+.app .contentarea{ top: 43px;}
+.app .leftNav{ 
+	width: 240px; 
+	top: 43px; 
+	bottom: 0; 
+	left: 0;
+	background: url(images/brd.png) repeat-y 100% 0;
+	overflow: auto;
+}
+/*.app .brd{
+	background: url(images/brd.png) repeat-y;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 239px;
+	height: 100%
+}*/
+.app .leftNav li a{ 
+	margin-bottom: 10px; 
+	display: block;
+	color: #08C; 
+	text-shadow: 0 1px 0 #F5F5F5;
+}
+.app .leftNav li a:hover{ color: #0377B1;}
+.app .leftNav li a:active{ color: #05618F;}
+.app .leftNav li a.active{ color: #254555; font-weight: bold;}
+.app .leftNav li a.collapse{ background: url(images/down.png) no-repeat 180px 0}
+.app .leftNav li a.right-arrow{ background: url(images/right-arrow.png) no-repeat 180px 0}
+.app .nav_emt{ padding: 20px 0 0 20px}
+.app .lft_sub_menu{ margin-left: 20px}
+.app .rightNav{ margin-left: 240px;}
+.app .rightNav .rightNav_head{
+	background: url(images/stripe.png) repeat;
+	height: 28px;
+	color: #000;
+	font-size: 16px;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 10px;
+	text-shadow: 0 1px 0 #FFF;
+	border-bottom: 1px solid #A0A0A0;
+	-moz-box-shadow: 0 1px 0 #FAFAFA;
+	-weblit-box-shadow: 0 1px 0 #FAFAFA;
+	box-shadow: 0 1px 0 #FAFAFA;
+}
+.app .rightNav .rightNav_cnt { padding: 20px 0 0 20px}
+
+/*Start@@ Alert css*/
+
+
+.app .alert_info {
+	display: block;
+	width: 95%;
+	margin: 20px 3% 0 3%;
+	margin-top: 20px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #B5E5EF url(images/icn_alert_info.png) no-repeat;
+	background-position: 10px 10px;
+	border: 1px solid #77BACE;
+	color: #082B33;
+	padding: 10px 0;
+	text-indent: 40px;
+	font-size: 14px;
+}
+
+.app .alert_warning {
+	display: block;
+	width: 95%;
+	margin: 20px 3% 0 3%;
+	margin-top: 20px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #F5F3BA url(images/icn_alert_warning.png) no-repeat;
+	background-position: 10px 10px;
+	border: 1px solid #C7A20D;
+	color: #796616;
+	padding: 10px 0;
+	text-indent: 40px;
+	font-size: 14px;
+}
+
+.app .alert_error {
+	display: block;
+	width: 95%;
+	margin: 20px 3% 0 3%;
+	margin-top: 20px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #F3D9D9 url(images/icn_alert_error.png) no-repeat;
+	background-position: 10px 10px;
+	border: 1px solid #D20009;
+	color: #7B040F;
+	padding: 10px 0;
+	text-indent: 40px;
+	font-size: 14px;
+}
+
+.app .alert_success {
+	display: block;
+	width: 95%;
+	margin: 20px 3% 0 3%;
+	margin-top: 20px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #E2F6C5 url(images/icn_alert_success.png) no-repeat;
+	background-position: 10px 10px;
+	border: 1px solid #79C20D;
+	color: #32510F;
+	padding: 10px 0;
+	text-indent: 40px;
+	font-size: 14px;
+}
+
+/*End@@ Alert css*/
+
+
+/*Start@@ Forms css*/
+
+.app ol { list-style:none;}
+.app ol li { display:block; clear:both; padding:5px 5px 10px 0; overflow: hidden; }
+.app ol li label { display:block; margin:0; padding:5px 0 0 0;
+width: 200px;float: left;color:#99820C}
+.app ol li input.text{ width:480px; float: left;}
+.app ol li select.text { width:486px;  float: left; }
+.app ol li textarea { width:480px; }
+.app ol li .send { margin:16px 0 0 0;}
+
+.app input, .app select{outline-color:rgba(82,168,236,.6)}
+.app input.text,.app select.text,.app textarea{ 
+  color:#000000; 
+  outline:0 none;
+  border:1px solid #B1B1B1;
+  -moz-border-radius: 2px;
+-webkit-border-radius: 2px;
+border-radius: 2px;
+  -moz-box-shadow:0 1px 0 #e7e9eb inset;
+  -webkit-box-shadow:0 1px 0 #e7e9eb inset;
+  box-shadow:0 1px 0 #e7e9eb inset;
+  -webkit-transition:all .2s ease-in-out;
+  -moz-transition:all .2s ease-in-out;
+  transition:all .2s ease-in-out;
+}
+.app input.text,.app select.text,.app textarea{padding:4px;}
+.app textarea{
+  resize: vertical;
+  height:66px;
+  overflow:auto
+}
+.app input.text:hover,.app select.text:hover,.app textarea:hover{
+  border:1px solid #999;
+  outline:0 none;
+}
+.app input.text { height: 16px; }
+.app textarea:focus,.app input.text:focus,.app select.text:focus,
+.app input.text:hover:focus,.app select.text:hover:focus,
+.app textarea:hover:focus{
+  -webkit-box-shadow:inset 0 1px 3px rgba(0,0,0,.05),0 0 8px rgba(82,168,236,.6);
+  -moz-box-shadow:inset 0 1px 3px rgba(0,0,0,.05),0 0 8px rgba(82,168,236,.6);
+  box-shadow:inset 0 1px 3px rgba(0,0,0,.05),0 0 8px rgba(82,168,236,.6);
+  border:1px solid #56b4ef;
+}
+.app div.error{ 
+    clear: both;
+    color:#bf1c12; 
+    margin: 2px 0 0 200px;
+    text-shadow:0 0 2px #F16181
+}
+
+/*End@@ Forms css*/
+
+/*start@@code for filter*/
+.app .filter_panel{ 
+	margin: -20px 0 0 -20px;
+	padding:10px;
+	background: #FFFBED;
+	border-bottom: 1px solid #B6B6B6;
+}
+.app .filter_panel select{ margin-bottom: 10px}
+/*End@@code for filter*/
+.app .chat_links{ margin: 10px 0 0}
+.app .chat_links a{color: #003F28; text-shadow:0 1px 0 #f1f1f1;}
+.app .chat_links a:hover{color: #016943;}
+.app .chat_links a:active{color: #023D27;}
+.app .text.mdl_ip{ width: 160px}
+.app #password_form div.error{ margin-left: 124px}
+.app .ui-jqgrid div.loading{
+	background: url(images/32.gif) no-repeat center;
+	height: 36px;
+	margin: -18px 0 0 -18px;
+	padding: 0;
+	width: 36px;
+	left: 50%;
+	top: 50%;
+	text-indent: -90000px;
+	border: 0 !important;
+}
+.app .ui-jqgrid tr.jqgrow td{ white-space: normal; } 
+/*.app .ui-jqgrid-pager td { border: 0 !important; } */
+.app .reset_alert{ margin-bottom: 3% !important; margin-left: 0 !important}
+
+/**start@@code for the college updates*/
+.app .collegeUpdates li{
+	border:1px solid #FF9C84;
+	padding:20px 20px 20px 40px;
+	background:#fff;
+	color: #1F4237;
+	position: relative;
+	margin: 10px 20px 20px 0;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+}
+.app .collegeUpdates li img{ 
+	position: absolute;
+	left: 10px;
+	top: 12px
+}
+/**End@@code for the college updates*/
+
+.app .uploadifyQueue .completed, .app .uploadifyQueueItem  {
+	background-color: #FFF9CB;
+	border: 2px solid #FFEC9E;
+}
+
+/*Start@@code for the id card*/
+.app .id_userview{ 
+	position: relative;
+	width: 600px;
+	background: url(images/id-bg.png) repeat;
+}
+/*End@@code for the id card*/
