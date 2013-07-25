@@ -6,6 +6,4 @@ Online users
 <?php }}else{ ?>
 <p>No users online.</p>
 <?php } ?>
-</div>
 
-HI. This is a Test a new test.
