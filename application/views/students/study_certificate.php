@@ -46,7 +46,6 @@ else if($this->session->userdata('student_data')){
     <li>
         <input type="button" name="imageField" id="imageField" class="button gblue j_gen_form_submit" value="Submit"/>
         <input type="button" name="imageField" id="imageField" class="clear grey button m_l_20" value="Clear"/>
-        <div class="clr"></div>
     </li>
 </ol>
 </form>

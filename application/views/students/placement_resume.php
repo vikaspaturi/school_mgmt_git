@@ -1,10 +1,4 @@
-<h2><span>Upload Resume.</span></h2>
-<div class="clr"></div>
-<div class="user_instructions">
-    <p style="width:200px; float:left;">Please enter your details below.</p>
-    <p style="width:200px; float:right;font-weight: bold;"><i><b>*</b> required fields</i></p>
-    <div class="clr"></div>
-</div>
+<div class="f_r f_b m_r_10">* required fields</div>
 
 <form id="appl_form" suc_msg="Your Resume Submited Successfully.">
     <input id="" name="rel" class="text" type="hidden" value="placement_resumes"/>
@@ -17,7 +11,7 @@
         </li>
         <li>
             <br/>
-            <input type="button" name="imageField" class="upload button j_gen_form_submit" value="Submit"/>
+            <input type="button" name="imageField" class="upload button gblue j_gen_form_submit" value="Submit"/>
 <!--            <input type="button" name="imageField" id="get_button" class="get button" value="Get the id card"style="margin-left: 126px;"/>-->
         </li>
     </ol>

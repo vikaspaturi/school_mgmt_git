@@ -1,12 +1,3 @@
-<style type="text/css" rel="stylesheet">
-    table.sample td {
-        padding: 5px;
-        text-align: center;
-    }
-</style>
-<pre><?php //print_r($weekdays); ?></pre>
-<pre><?php //print_r($cycle_periods); ?></pre>
-<pre><?php //print_r($students_periods); ?></pre>
 <?php
 
 
@@ -56,4 +47,4 @@ if(!empty($weekdays) && !empty($cycle_periods) && !empty($students_periods)){
 <?php }  ?>
 
     <br/><br/>
-    <a href="<?php echo site_url('students/student_attendance');  ?>" > <br> &lt;&lt; Back</a>
+    <a class="button gblue" href="<?php echo site_url('students/student_attendance');  ?>" > &lt;&lt; Back</a>

@@ -324,3 +324,39 @@ border-radius: 2px;
 .app .stud_det_panel .std_lst label{ color: #99820C; width: 130px}
 .app .stud_det_panel .std_lst span{ width: 300px; color: #010101}
 /*End@@code for the id card*/
+
+/*start@@code for the certificate*/
+.app .certificate{
+	background: url(images/greynoise.png) repeat;
+	border:1px solid #4b4b4b; 
+	width:700px;
+	position:relative;
+	color: #d6d5d5;
+	padding: 10px;
+	-moz-box-shadow: 0 1px 2px #D3D3D3;
+	-webkit-box-shadow: 0 1px 2px #D3D3D3;
+	box-shadow: 0 1px 2px #D3D3D3, 0 1px 1px #C0C0C0 inset;
+}
+.app .certificate b{ color: #fff;}
+.app .certificate .std_crtimg{
+	background: url(images/std_crt.png) no-repeat;
+	width: 236px;
+	height: 55px;
+	top: 24px;
+	left: -12px
+}
+.app .certificate .crt_coll_logo{
+	top: 10px;
+	left: auto;
+	right: 10px
+}
+.app .certificate .crt_col_ph{
+	width: 260px;
+	margin: 0 auto
+}
+.app .certificate .crt_fot{ bottom: 10px}
+.app .crt_cnt{
+	min-height:300px; 
+	padding: 60px 30px 10px
+}
+/*End@@code for the certificate*/

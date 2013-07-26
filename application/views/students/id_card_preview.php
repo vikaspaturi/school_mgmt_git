@@ -34,7 +34,7 @@ foreach($data as $k=>$v){?>
             </div>
         </div>
     </div>
-    <div class="m_t_10">
+    <div class="m_t_20">
         <input type="button" name="imageField" id="imageField" class="button grey " value="Back" onclick="javascript:window.location.reload();"/>
         <input type="button" name="imageField" id="imageField" class="button m_l_20 gblue  j_gen_form_submit" value="Confirm"/>
     </div>
