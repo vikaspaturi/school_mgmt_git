@@ -1,37 +1,3 @@
-<style type="text/css">
-#t {
-	border: 1px solid #DFDFDF;
-	background-color: #fefff0;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
-	font-family: Arial,"Bitstream Vera Sans",Helvetica,Verdana,sans-serif;
-	color: #333;
-}
-#t td, #t th {
-	border-top-color: white;
-	border-bottom: 1px solid #DFDFDF;
-	color: #555;
-}
-#t thead td {
-	text-shadow: rgba(255, 255, 255, 0.796875) 0px 1px 0px;
-	font-family: Georgia,"Times New Roman","Bitstream Charter",Times,serif;
-	font-weight: bold;
-	padding: 7px 7px 8px;
-	text-align: left;
-	line-height: 1.3em;
-	font-size: 14px;
-	font-weight: bold;
-}
-#t td {
-	font-size: 12px;
-	padding: 12px 8px;
-	vertical-align: top;
-}
-</style>
-
-
-
 <script>
 var i=1;
 var j=2;
@@ -164,15 +130,15 @@ credits[i].value='';
 		</li>
 		<li>
 		
-		<table id="t" name="t" width="70%" border="0" style="display:none;margin-left:0px;cell-padding:20px;cell-spacing:5px">
-		<thead>
-		<tr>
-		<td width="10%"> S No</td>
-		<td width="20%">Subject</td>
-		<td width="20%">Type</td>
-		<td width="20%">Credits</td>
-		</tr>
-		</thead>
+		<table id="t" class="table_view" name="t" width="70%" border="0" style="display:none;margin-left:0px;cell-padding:20px;cell-spacing:5px">
+			<thead>
+			<tr>
+				<td width="10%"> S No</td>
+				<td width="20%">Subject</td>
+				<td width="20%">Type</td>
+				<td width="20%">Credits</td>
+			</tr>
+			</thead>
 		</table>
 		</li>
 		<li>

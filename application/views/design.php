@@ -84,6 +84,35 @@
                         <div class="alert_error">An Error Message</div>
                         <div class="alert_success">A Success Message</div>
 
+                        <br />
+
+                        <table class="table_view">
+                            <thead>
+                                <tr>
+                                    <th>Month</th>
+                                    <th>Savings</th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>January</td>
+                                <td>$100</td>
+                            </tr>
+                        </table>
+
+                         <br />
+
+                         <a class="button grey">Grey</a>
+                         <a class="button red">red</a>
+                         <a class="button blue">blue</a>
+                         <a class="button green">green</a>
+                         <a class="button black">Grey</a>
+                         <a class="button grey">black</a>
+                         <a class="button black">black</a>
+                         <a class="button yellow">yellow</a>
+                         <a class="button purple">purple</a>
+                         <a class="button gblue">gblue</a>
+
+
                     </div>
                 </div>
             </div>
