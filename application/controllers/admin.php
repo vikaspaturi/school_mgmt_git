@@ -17,6 +17,7 @@ class Admin extends CI_Controller {
     }
 
     public function index() {
+        $data["notice_board"]=$this->students_model->get_notice_board();
         $data['content_page'] = 'admin/home.php';
         $this->load->view('common/base_template', $data);
     }
