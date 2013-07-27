@@ -267,10 +267,7 @@ border-radius: 2px;
 	border: 0 !important;
 }
 .app .ui-jqgrid tr.jqgrow td{ white-space: normal; } 
-/*.app .ui-jqgrid-pager td { border: 0 !important; } */
-/*.app .reset_alert{ margin-bottom: 3% !important; margin-left: 0 !important}*/
-
-
+.app .ui-jqgrid .ui-jqgrid-bdiv{ min-height: 260px}
 
 /**start@@code for the college updates*/
 .app .collegeUpdates li{
