@@ -46,7 +46,7 @@ Design by http://www.MyCollege.org
                 <div class="rightNav">
                     <div class="rightNav_head">...</div>
                     <div class="rightNav_cnt">
-                        <div id="notofication_wrapper">
+                        <div id="notofication_wrapper" class="reset_alert">
                             <?php
                                 if($this->session->flashdata('error_msg')){     echo showBigError($this->session->flashdata('error_msg'));      }
                                 if($this->session->flashdata('info_msg')){      echo showBigInfo($this->session->flashdata('info_msg'));        }

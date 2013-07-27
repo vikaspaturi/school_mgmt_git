@@ -35,15 +35,6 @@
 </form>
 
 
-<style type="text/css">
-    .form_box{
-        margin: 10px 0;
-        border: 1px solid #999;
-        box-shadow: 1px 1px 1px #ccc;
-        padding: 10px;
-    }
-</style>
-
 <script type="text/javascript">
     $(function(){
         $('#edit_items_form').validate();

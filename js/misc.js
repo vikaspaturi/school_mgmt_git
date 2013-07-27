@@ -11,8 +11,8 @@ function placement_grid(){
     jQuery("#grid_table").jqGrid({
             url:site_url+'/misc/placement_grid',
             datatype: "json",
-            width:900,
-            height:250,
+            height:'auto',
+            autowidth: true,
             mtype: 'POST',
             recordtext: "Placement Cell Request(s)",
             recordtext: "Viewing {0} - {1} of {2} Placement Cell Request(s)",
@@ -39,8 +39,8 @@ function study_abroad_grid(){
     jQuery("#grid_table").jqGrid({
             url:site_url+'/misc/study_abroad_grid',
             datatype: "json",
-            width:900,
-            height:250,
+            height:'auto',
+            autowidth: true,
             mtype: 'POST',
             recordtext: "Records",
             recordtext: "Viewing {0} - {1} of {2} Records",

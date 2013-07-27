@@ -73,8 +73,8 @@ function books_dispatched_grid(){
     jQuery("#grid_table").jqGrid({
             url:site_url+'/library/books_dispatched',
             datatype: "json",
-            width:900,
-            height:250,
+            height:'auto',
+            autowidth: true,
             mtype: 'POST',
             recordtext: "Books(s) Dispatched",
             recordtext: "Viewing {0} - {1} of {2} Books(s) Dispatched",
@@ -106,8 +106,8 @@ function check_data_grid(student_number){
     jQuery("#grid_table").jqGrid({
             url:site_url+'/library/check_data_grid',
             datatype: "json",
-            width:900,
-            height:250,
+            height:'auto',
+            autowidth: true,
             mtype: 'POST',
             recordtext: "Books(s) Dispatched",
             recordtext: "Viewing {0} - {1} of {2} Books(s) Dispatched",
@@ -144,8 +144,8 @@ function no_due_request_grid(){
     jQuery("#grid_table").jqGrid({
             url:site_url+'/staff/no_due_requests',
             datatype: "json",
-            width:900,
-            height:250,
+            height:'auto',
+            autowidth: true,
             mtype: 'POST',
             recordtext: "Request(s)",
             recordtext: "Viewing {0} - {1} of {2} Request(s)",

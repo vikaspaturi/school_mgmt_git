@@ -12,8 +12,8 @@
         jQuery("#grid_table").jqGrid({
                 url:site_url+'/admin/batch_no',
                 datatype: "json",
-                width:900,
-                height:250,
+                height:'auto',
+                autowidth: true,
                 mtype: 'POST',
                 recordtext: "Viewing {0} - {1} of {2} Batch No(s)",
                 pgtext : "Page {0} of {1}",

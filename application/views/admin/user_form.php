@@ -4,7 +4,7 @@
     <input id="rel" name="rel" type="hidden" class="text" value="user_form"/>
     <input id="id" name="id" type="hidden" class="text" value="<?php if (isset($user_details[0]->id)) echo $user_details[0]->id; ?>"/>
     <input id="users_type_id" type="hidden"  name="users_type_id" class="text" value="<?php if (isset($user_details[0]->users_type_id)) echo $user_details[0]->users_type_id; ?>"/>
-<ol style="border:1px solid #ccc;">
+<ol>
     <li>
         <label for="username">Username:*</label>
         <input id="username" name="username" class="text" value="<?php if (isset($user_details[0]->username))

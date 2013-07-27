@@ -102,7 +102,9 @@
 	-weblit-box-shadow: 0 1px 0 #FAFAFA;
 	box-shadow: 0 1px 0 #FAFAFA;
 }
-.app .rightNav .rightNav_cnt { padding: 20px 0 0 20px}
+.app .rightNav .rightNav_cnt { padding: 20px 20px 0 20px}
+
+/*.app .jqgrid_wrap { padding-right: 20px;}*/
 
 /*Start@@ Alert css*/
 
@@ -173,6 +175,12 @@
 	padding: 10px 0;
 	text-indent: 40px;
 	font-size: 14px;
+}
+
+.app .reset_alert .alert_info, .app .reset_alert .alert_warning, 
+.app .reset_alert .alert_error, .app .reset_alert .alert_success { 
+        margin-bottom: 2% !important;
+        margin-left: 0 !important
 }
 
 /*End@@ Alert css*/
@@ -260,7 +268,9 @@ border-radius: 2px;
 }
 .app .ui-jqgrid tr.jqgrow td{ white-space: normal; } 
 /*.app .ui-jqgrid-pager td { border: 0 !important; } */
-.app .reset_alert{ margin-bottom: 3% !important; margin-left: 0 !important}
+/*.app .reset_alert{ margin-bottom: 3% !important; margin-left: 0 !important}*/
+
+
 
 /**start@@code for the college updates*/
 .app .collegeUpdates li{

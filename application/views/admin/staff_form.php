@@ -1,11 +1,9 @@
-<div class="clr"></div>
-<br/>
-<form id="appl_form" action="/admin/save_user_account">
+<form id="appl_form" action="/admin/save_user_account" class="m_t_10">
     <input id="rel" name="rel" type="hidden" class="text" value="user_form"/>
     <input id="id" name="id" type="hidden" class="text" value="<?php if (isset($user_details[0]->id)) echo $user_details[0]->id; ?>"/>
     <input id="users_type_id" type="hidden"  name="users_type_id" class="text" value="<?php if (isset($user_details[0]->users_type_id)) echo $user_details[0]->users_type_id; ?>"/>
     <input id="staff_rec_id" type="hidden" name="staff_rec_id" class="text" value="<?php if (isset($data[0]->id)) echo $data[0]->id; ?>"/>
-<ol style="border:1px solid #ccc; ">
+<ol>
     <li>
         <label for="name">Name:*</label>
         <input id="name" name="name" class="text"  value="<?php if(isset($data[0]->name )) echo $data[0]->name; ?>"/>
@@ -96,7 +94,7 @@
     <div class="clr"></div>
 </ol>
 <br/>
-<ol style="border:1px solid #ccc;">
+<ol>
     <li>
         <label for="username">Username:*</label>
         <input id="username" name="username" class="text" value="<?php if (isset($user_details[0]->username))

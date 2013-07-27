@@ -20,8 +20,8 @@ function library_books_grid(){
     jQuery("#grid_table").jqGrid({
             url:site_url+'/library/library_books',
             datatype: "json",
-            width:900,
-            height:250,
+            height:'auto',
+            autowidth: true,
             mtype: 'POST',
             recordtext: "Books(s)",
             recordtext: "Viewing {0} - {1} of {2} Books(s)",
@@ -52,8 +52,8 @@ function reserved_books_grid(){
     jQuery("#grid_table").jqGrid({
             url:site_url+'/library/reserved_library_books',
             datatype: "json",
-            width:900,
-            height:250,
+            height:'auto',
+            autowidth: true,
             mtype: 'POST',
             recordtext: "Books(s)",
             recordtext: "Viewing {0} - {1} of {2} Books(s)",
@@ -179,8 +179,8 @@ function view_assignments(){
     jQuery("#grid_table").jqGrid({
             url:site_url+'/students/view_assignments',
             datatype: "json",
-            width:900,
-            height:250,
+            height:'auto',
+            autowidth: true,
             mtype: 'POST',
             recordtext: "Assignment(s)",
             recordtext: "Viewing {0} - {1} of {2} Assignment(s)",
@@ -213,8 +213,8 @@ function view_library_pdfs(){
     jQuery("#grid_table").jqGrid({
             url:site_url+'/students/view_library_pdfs',
             datatype: "json",
-            width:900,
-            height:250,
+            height:'auto',
+            autowidth: true,
             mtype: 'POST',
             recordtext: "PDF's",
             recordtext: "Viewing {0} - {1} of {2} Assignment(s)",

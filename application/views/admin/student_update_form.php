@@ -1,14 +1,9 @@
-<?php // print_r($student_details);
-//echo $student_details[0]->photo;
-?>
-<div class="clr"></div>
-<br/>
-<form id="appl_form" action="admin/update_user_account" enctype="multipart/form-data" method="post">
+<form id="appl_form" action="admin/update_user_account" enctype="multipart/form-data" method="post" class="m_t_10">
     <input id="rel" name="rel" type="hidden" class="text" value="user_form" />
     <input id="id" name="id" type="hidden" class="text" value="<?php if (isset($user_details[0]->id)) echo $user_details[0]->id; ?>"/>
     <input id="users_type_id" type="hidden"  name="users_type_id" class="text" value="<?php if (isset($user_details[0]->users_type_id)) echo $user_details[0]->users_type_id; ?>"/>
     <input id="student_rec_id" type="hidden" name="student_rec_id" class="text" value="<?php if (isset($student_details[0]->id)) echo $student_details[0]->id; ?>"/>
-<ol style="border:1px solid #ccc; ">
+<ol>
     <li>
         <label for="name">Name of the Student:*</label>
         <input id="name" name="name" class="text" value="<?php if (isset($student_details[0]->name))
@@ -199,7 +194,7 @@
     <div class="clr"></div>
 </ol>
 <br/>
-<ol style="border:1px solid #ccc;">
+<ol>
     <li>
         <label for="username">Username:*</label>
         <input id="username" name="username" class="text" value="<?php if (isset($user_details[0]->username))
@@ -217,7 +212,7 @@
     </li>-->
     <div class="clr"></div>
 </ol>
-<ol style="border:1px solid #ccc;">
+<ol>
     <li>
 	<table><tr>
        <td> <img src="<?if (isset($student_details[0]->photo))
@@ -256,35 +251,35 @@
 <br/>
 <ol>
     <li>
-        <input type="submit" name="imageField" id="imageField" class="send button j_gen_form_submit" value="Save"/>
-        <input type="button" name="imageField" id="imageField" class="send button" value="Back" onclick="javascript:window.location.reload();"/>
+        <input type="submit" name="imageField" id="imageField" class=" button j_gen_form_submit gblue" value="Save"/>
+        <input type="button" name="imageField" id="imageField" class=" button grey m_l_20 " value="Back" onclick="javascript:window.location.reload();"/>
         <div class="clr"></div>
     </li>
 </ol>
 </form>
 <script type="text/javascript">
-$(document).ready(function(){
-$('#students_number').keyup(function(){
-var stunum=$('#students_number').val();
-$('#username').val(stunum)
-});
-if(<?php echo $student_details[0]->course_id;?>==1)
-{
-
-$("#ugtc").attr("disabled", "disabled");
-$("#ugsc").attr("disabled", "disabled");
-$("#ugpc").attr("disabled", "disabled");
-$("#ugcmm").attr("disabled", "disabled");
-}
-else {
-		$("#ugtc").removeAttr("disabled");
-$("#ugsc").removeAttr("disabled");
-$("#ugpc").removeAttr("disabled");
-$("#ugcmm").removeAttr("disabled");
-    		
-    	}
-
-});
+    $(document).ready(function(){
+        $('#students_number').keyup(function(){
+            var stunum=$('#students_number').val();
+            $('#username').val(stunum)
+        });
+        if(<?php echo $student_details[0]->course_id; ?>==1)
+        {
+            
+            $("#ugtc").attr("disabled", "disabled");
+            $("#ugsc").attr("disabled", "disabled");
+            $("#ugpc").attr("disabled", "disabled");
+            $("#ugcmm").attr("disabled", "disabled");
+        }
+        else {
+            $("#ugtc").removeAttr("disabled");
+            $("#ugsc").removeAttr("disabled");
+            $("#ugpc").removeAttr("disabled");
+            $("#ugcmm").removeAttr("disabled");
+            
+        }
+        
+    });
     if($('.apply_datepicker').length>0){
         $('.apply_datepicker').datepicker({dateFormat:'yy-mm-dd', changeMonth: true, changeYear: true});
     }

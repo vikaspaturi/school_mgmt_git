@@ -71,8 +71,8 @@ function print_requests(){
     jQuery("#grid_table").jqGrid({
             url:site_url+'/exam/print_request',
             datatype: "json",
-            width:900,
-            height:250,
+            height:'auto',
+            autowidth: true,
             mtype: 'POST',
             recordtext: "Question Paper(s)",
             recordtext: "Viewing {0} - {1} of {2} Question Papers",
@@ -123,8 +123,8 @@ function load_q_papers_grid(){
     jQuery("#grid_table").jqGrid({
             url:site_url+'/staff/browse_q_papers_grid',
             datatype: "json",
-            width:900,
-            height:250,
+            height:'auto',
+            autowidth: true,
             mtype: 'POST',
             recordtext: "Question Paper(s)",
             recordtext: "Viewing {0} - {1} of {2} Question Papers",

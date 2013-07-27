@@ -16,8 +16,8 @@ function books_dispatched_grid(student_number,book_number){
     jQuery("#grid_table").jqGrid({
             url:site_url+'/book_keeper/books_dispatched_grid',
             datatype: "json",
-            width:900,
-            height:250,
+            height:'auto',
+            autowidth: true,
             mtype: 'POST',
             recordtext: "Books(s) Dispatched",
             recordtext: "Viewing {0} - {1} of {2} Books(s) Dispatched",
@@ -55,8 +55,8 @@ function books_reserved_grid(){
     jQuery("#grid_table").jqGrid({
             url:site_url+'/book_keeper/books_reserved',
             datatype: "json",
-            width:900,
-            height:250,
+            height:'auto',
+            autowidth: true,
             mtype: 'POST',
             recordtext: "Books(s) Reserved",
             recordtext: "Viewing {0} - {1} of {2} Books(s) Reserved",
@@ -107,8 +107,8 @@ function receive_books_grid(student_number,teacher_number){
     jQuery("#grid_table").jqGrid({
             url:site_url+'/book_keeper/receive_books_grid',
             datatype: "json",
-            width:900,
-            height:250,
+            height:'auto',
+            autowidth: true,
             mtype: 'POST',
             recordtext: "Books(s) Dispatched",
             recordtext: "Viewing {0} - {1} of {2} Books(s) Dispatched",
@@ -165,8 +165,8 @@ function ticket_grid(){
     jQuery("#grid_table").jqGrid({
             url:site_url+'/book_keeper/ticket_grid',
             datatype: "json",
-            width:900,
-            height:250,
+            height:'auto',
+            autowidth: true,
             mtype: 'POST',
             recordtext: "Books(s)",
             recordtext: "Viewing {0} - {1} of {2} Books(s)",

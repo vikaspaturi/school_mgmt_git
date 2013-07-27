@@ -10,8 +10,8 @@
         jQuery("#grid_table").jqGrid({
                 url:site_url+'/admin/academic_calendar_grid',
                 datatype: "json",
-                width:900,
-                height:250,
+                height:'auto',
+                autowidth: true,
                 mtype: 'POST',
                 recordtext: "Viewing {0} - {1} of {2} Academic Calendar(s)",
                 pgtext : "Page {0} of {1}",

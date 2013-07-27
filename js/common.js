@@ -351,4 +351,4 @@ function customRange2_Year(input) {
 
 setTimeout(function(){
     $('#notofication_wrapper').slideUp('slow');
-},10000);
+},120000);
