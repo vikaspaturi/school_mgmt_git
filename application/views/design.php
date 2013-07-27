@@ -105,8 +105,6 @@
                          <a class="button red">red</a>
                          <a class="button blue">blue</a>
                          <a class="button green">green</a>
-                         <a class="button black">Grey</a>
-                         <a class="button grey">black</a>
                          <a class="button black">black</a>
                          <a class="button yellow">yellow</a>
                          <a class="button purple">purple</a>
