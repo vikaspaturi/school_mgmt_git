@@ -15,7 +15,7 @@
 <ol>
     <li class="">
         <br/><br/>
-        <table border="2" class="sample">
+        <table class="sample table_view">
             <tr>
                 <th>Day/Period</th>
                 <?php for($i=1;$i<=7;$i++){ ?>

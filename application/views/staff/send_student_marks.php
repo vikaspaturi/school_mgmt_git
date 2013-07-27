@@ -78,7 +78,7 @@
             ?>
             <li id="student_marks_li">
                 <br/>
-                <table border="2" class="sample" >
+                <table class="sample table_view" >
                     <tr>
                         <th> &nbsp; </th>
                         <th>Subject Name</th>

@@ -136,7 +136,7 @@
 <!--        <input id="fee_details" name="fee_details" class="text" value="<?php if (isset($student_details[0]->fee_details))
                    echo $student_details[0]->fee_details; ?>"/>-->
                    <span style="padding:5px; padding-left: 0;" class="fl">
-                   <table border="2" class="sample">
+                   <table class="sample table_view">
                         <tr>
                             <th>Year</th>
                             <th>1<sup>st</sup>Year</th>

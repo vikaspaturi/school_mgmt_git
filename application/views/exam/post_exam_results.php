@@ -107,7 +107,7 @@
                 <h4>Students: </h4>
             </li>
             <li id="student_marks_li">
-                <table border="2" class="sample" style="margin: 0 auto;">
+                <table class="sample table_view" style="margin: 0 auto;">
                     <tr>
                         <th>Student</th>
                         <th>Add/Edit marks</th>
@@ -259,7 +259,7 @@
                                 <input type="hidden" name="regulation_id" value="<?php if(isset($s_data['regulation_id'])){ echo $s_data['regulation_id']; }  ?>"/>
                                 <input type="hidden" name="mode_of_exam_id" value="<?php if(isset($s_data['mode_of_exam_id'])){ echo $s_data['mode_of_exam_id']; }  ?>"/>
                                 <input type="hidden" name="is_mba" value="<?php if(isset($s_data['is_mba'])){ echo $s_data['is_mba']; }  ?>"/>
-                <table border="2" class="sample">
+                <table class="sample table_view">
                     <tr>
                         <th>Subject</th>
                         <?php if($s_data['is_mba']=='1'){  ?>

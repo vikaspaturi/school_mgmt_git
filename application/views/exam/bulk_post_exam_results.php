@@ -66,16 +66,16 @@
             </select>
         </li>
 
-        <li  style="padding-top: 5px;">
+        <li  >
             <label for="is_mba">Course Type:* </label>
             <?php  if(isset($form_data['is_mba'])){ $is_mba_select=$form_data['is_mba']; }else{ $is_mba_select=0; } ?>
             <label ><input id="is_mba_1" type="radio" name="is_mba" value="1" class="required" title="Please Select a Course Type" <?php if($is_mba_select=='1'){ echo ' checked="checked" '; }  ?>/> M.B.A </label>
             <label ><input id="is_mba_2" type="radio" name="is_mba" value="0" class="required" title="Please Select a Course Type" <?php if($is_mba_select=='0'){ echo ' checked="checked" '; }  ?>/> B.Tech/ Others </label>
         </li>
 
-        <li style="border:1px solid #dadada; padding-bottom:5px;">
-            <h4 style="margin: 5px;">CSV Format:</h4>
-            <table border="2" class="sample">
+        <li >
+            <h4 class="m_t_20">CSV Format:</h4>
+            <table class="sample table_view m_t_10">
                 <tbody>
                     <tr>
                         <th>STUDENT NUMBER</th>

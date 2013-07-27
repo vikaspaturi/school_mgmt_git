@@ -315,7 +315,7 @@ if (isset($student_details[0]->name))
     <li>
         <label for="fee_details">Fee Details:*</label>
                    <span style="padding:5px; padding-left: 0;" class="fl">
-                   <table border="2" class="sample">
+                   <table class="sample table_view">
                         <tr>
                             <th>Year</th>
                             <th>1<sup>st</sup>Year</th>

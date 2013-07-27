@@ -23,7 +23,7 @@ if(!empty($weekdays) && !empty($cycle_periods) && !empty($staff_periods)){
 
     <br/>
     <h4>Schedule</h4>
-    <table border="2" class="sample">
+    <table class="sample table_view">
         <tr>
             <th>#</th>
             <?php foreach($cycle_periods as $cp_k=>$cp_v){ ?>

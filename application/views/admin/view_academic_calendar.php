@@ -63,7 +63,7 @@
         <?php if(empty($items_data)){ echo showBigInfo('No Items Added to the Calendar. Please try again.'); }else{ ?>
 
         <div style="padding:5px;" class="">
-            <table border="2" class="sample">
+            <table class="sample table_view">
                 <tr>
                     <th>From </th>
                     <th>To</th>

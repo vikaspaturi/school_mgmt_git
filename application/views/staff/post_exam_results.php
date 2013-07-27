@@ -108,7 +108,7 @@
             ?>
             <li id="student_marks_li">
                 <br/>
-                <table border="2" class="sample" >
+                <table class="sample table_view" >
                     <tr>
                         <th>Student</th>
                         <th>Subject</th>
@@ -147,7 +147,7 @@
             </li>
             <?php }else{  ?>
             <li id="student_marks_li">
-                <table border="2" class="sample">
+                <table class="sample table_view">
                     <tr>
                         <th>Student</th>
                         <th>Subject</th>

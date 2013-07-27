@@ -1,6 +1,6 @@
 <?php  // print_r($data);
 if (isset($data) && count($data)>0) { ?>
-<table class="sample table_view">
+<table class="sample table_view table_view">
     <thead>
         <th>In charge</th>
         <th>Status</th>

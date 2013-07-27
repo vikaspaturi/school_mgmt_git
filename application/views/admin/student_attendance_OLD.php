@@ -19,7 +19,7 @@ if (empty($attendance_details)) {
     ?>
     
     <div style="padding:5px;" class="">
-        <table border="2" class="sample">
+        <table class="sample table_view">
             <tr>
                 <th>Semester</th>
                 <th>Course</th>

@@ -88,7 +88,7 @@
             <?php }else{  ?>
 
             
-            <table border="2" class="sample" style="margin: 0 auto;">
+            <table class="sample table_view" style="margin: 0 auto;">
                 <tr>
                     <th>Student</th>
                     <th>Subject</th>

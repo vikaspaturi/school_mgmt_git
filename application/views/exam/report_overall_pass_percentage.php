@@ -63,7 +63,7 @@
             <?php if(empty($students_data)){  ?>
             <h3>No students Found</h3>
             <?php }else{  ?>
-                <table border="2" class="sample" style="margin: 0 auto;">
+                <table class="sample table_view" style="margin: 0 auto;">
                     <tr>
                         <th>Total Students</th>
                         <th>Passed Students</th>

@@ -93,7 +93,7 @@
                 <h4>Students: </h4>
             </li>
             <li id="student_marks_li">
-                <table border="2" class="sample">
+                <table class="sample table_view">
                     <tr>
                         <th>Student</th>
                         <th>Add/Edit marks</th>

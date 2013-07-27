@@ -19,7 +19,7 @@ if(count($data)){
     <input type="hidden" name="user_id" value="<?php if(isset($data[0]['user_id'])) echo $data[0]['user_id']; else echo 0;?>"/>
     <ol>
         <li>
-            <table border="2" class="sample">
+            <table class="sample table_view">
                 <tr>
                     <th>Year</th>
                     <th>1<sup>st</sup>Sem</th>

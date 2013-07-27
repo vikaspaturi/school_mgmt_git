@@ -29,7 +29,7 @@ if (empty($attendance_details)) {
             $attendedClasses=$totalClasses=0;
         ?>
     <div style="padding:5px;" class="">
-        <table border="2" class="sample">
+        <table class="sample table_view">
             <tr>
                 <td colspan="3">
                     <?php echo dateFormat($ma_k.'-01','M'); ?> Attendance:

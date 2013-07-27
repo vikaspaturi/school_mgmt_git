@@ -4,7 +4,7 @@
 <div class="clr"></div>
 <ol>
     <li>
-        <table border="2" class="sample">
+        <table class="sample table_view">
             <tr>
                 <th>Day/Year</th>
                 <th>1<sup>st</sup>Year</th>

@@ -140,6 +140,27 @@ function showWarning($message='Warning...'){
     return $result;
 }
 
+function pinBoardMsg($messageArr=array()){
+    $result = '<ul class="collegeUpdates">';
+    if (!empty($messageArr)) {
+        
+        foreach ($messageArr as $k => $v) {
+            $result.='<li>
+                        <img src="'.base_url().'/css/images/pushpin_pink.png" class="upd_std" alt="user">
+                        '.$v->message.'<div class="post_date p_a"><span>Posted on: </span> '.((!empty($v->date_added))?dateFormat($v->date_added, 'd-M-y'):'').' </div>
+                    </li>';
+        }
+        
+    }else{
+        $result.='<li>
+                    <img src="'.base_url().'/css/images/pushpin_pink.png" class="upd_std" alt="user">
+                    No Messages<div class="post_date p_a"><span>Posted on: </span> '.((!empty($v->date_added))?dateFormat($v->date_added, 'd-M-y'):'').' </div>
+                </li>';
+    }
+    $result.=' </ul>';
+    return $result;
+}
+
 function urlsafe_b64encode($string) {
     $data = base64_encode($string);
     $data = str_replace(array('+','/','='),array('-','_',''),$data);

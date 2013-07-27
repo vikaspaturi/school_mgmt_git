@@ -1,20 +1,6 @@
 <?php // echo '<pre>'; print_r($data); echo '</pre>'; die; ?>
-<style>
-    table.sample td {
-        padding: 0px;
-    }
-    table.sample td input{
-        border:1px dashed #ccc;
-        padding: 4px 1px;
-    }
-    .showTtOptions{
-        display:none;
-    }
-</style>
+
 <form id="appl_form" action="/staff/update_time_table">
-<h2><span>Update Staff Time Table.</span></h2><br /><br />
-<div class="clr"></div>
-<div class="clr"></div>
 <ol>
     <li>
         <label for="from_month">Select Staff:* </label>
@@ -28,7 +14,7 @@
     </li>
     <li class="showTtOptions">
         <br/><br/>
-        <table border="2" class="sample">
+        <table class="sample table_view table_view">
             <tr>
                 <th>Day/Year</th>
                 <th>1<sup>st</sup>Year</th>
@@ -83,5 +69,5 @@
 </ol>
 <br/>
 <br/>
-<input type="button" name="imageField" id="imageField" class="send button showTtOptions j_gen_form_submit" value="Save Time Table"/>
+<input type="button" name="imageField" id="imageField" class=" button showTtOptions j_gen_form_submit  gblue" value="Save Time Table"/>
 </form>

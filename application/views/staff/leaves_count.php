@@ -1,10 +1,8 @@
 <?php // echo '<pre>'; print_r($leaves); echo '</pre>'; ;?>
-<h2 align='center'><span>Leaves Count Status</span></h2>
-<div class="clr"></div>
 
 <?php if(!empty($leaves)){  ?>
     <h2>Leaves Taken:</h2>
-    <table border="2" class="sample">
+    <table class="sample table_view">
             <tr>
                 <th>Leave Type</th>
                 <th>Number of Leaves</th>
@@ -21,6 +19,13 @@
     <br/>
 
 <?php }else{  ?>
-<h2>No leaves taken till now.</h2>
-<p>You have 15 Leaves remaining.</p>
+    <ul class="collegeUpdates">
+        <li>
+            <img src="<?php echo base_url(); ?>css/images/pushpin_pink.png" class="upd_std" alt="user"/>
+
+            <p>No leaves taken till now.</p>
+            <p>You have 15 Leaves remaining.</p>
+        </li>
+
+    </ul>
 <?php }  ?>

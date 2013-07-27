@@ -451,7 +451,7 @@ document.result.submit();
             <h4>Present Semester: <?php if(isset($student_data->sem_id)){ echo generalId('name','semisters','id',$student_data->sem_id); }  ?></h4>
             <h4>No. of Backlogs: <?php if(isset($numberOfBacklogs)){ echo $numberOfBacklogs; }  ?></h4>
             <br/>
-            <table border="2" class="sample">
+            <table class="sample table_view">
                 <tr>
                     <th>Subject</th>
                     <th>Internal 1</th>

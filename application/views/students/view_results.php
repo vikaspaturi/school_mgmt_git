@@ -157,7 +157,7 @@
             <p style="text-align:right;"><?php echo anchor('students/downloadReport','Download Excel',array('target'=>'_blank'));  ?></p>
             <?php }  ?>
 
-            <table border="2" class="sample">
+            <table class="sample table_view">
                 <tr>
                     <th>Subject</th>
                     <th>Internal 1</th>

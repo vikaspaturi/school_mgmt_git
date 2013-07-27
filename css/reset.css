@@ -168,6 +168,7 @@ a {
 .p_a{ position: absolute;} 
 .p_f{ position: fixed;} 
 .o_h{ overflow: hidden;}
+.o_a{ overflow: auto;}
 .hide{ display: none;}
 .f_18{ font-size: 18px}
 .f_12{ font-size: 12px}

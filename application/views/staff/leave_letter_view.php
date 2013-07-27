@@ -66,7 +66,7 @@ if(isset($data[0])) $data[0]=(object)$data[0];
             <?php }else{  ?>
             <h4>Work adjustments:</h4>
 
-            <table border="2" class="sample">
+            <table class="sample table_view">
                 <tr>
                     <th width="30%">Subject</th>
                     <th width="15%">Cycle</th>

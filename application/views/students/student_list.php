@@ -1,7 +1,7 @@
 <?php if(empty($student_details)){ echo showBigInfo('No Students found with the search criteria. Please try again.'); }else{ ?>
 
 <div style="padding:5px; padding-left: 0;" class="">
-    <table border="2" class="sample">
+    <table class="sample table_view">
         <tr>
             <th>Student Name</th>
             <th>Student Number</th>

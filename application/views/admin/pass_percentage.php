@@ -64,7 +64,7 @@
 <?php if($result_data && count($result_data)){
 ?>
 <h4>Search results</h4>
-<table border="2" class="sample">
+<table class="sample table_view">
     <tr>
         <th>S.no</th>
         <th>Username</th>

@@ -1,21 +1,7 @@
 <?php  // echo '<pre>'; print_r($branches);print_r($days); echo '</pre>'; die; ?>
-<style>
-    table.sample td {
-        padding: 0px;
-    }
-    table.sample td input{
-        border:1px dashed #ccc;
-        padding: 4px 1px;
-        width:85px;
-    }
-    .showTtOptions{
-        display:none;
-    }
-</style>
+
 <form id="appl_form" action="/staff/update_student_time_table">
-<h2><span>Update student Time Table.</span></h2><br /><br />
-<div class="clr"></div>
-<div class="clr"></div>
+
 <ol>
 
 
@@ -62,9 +48,8 @@
             <?php } ?>
         </select>
     </li>-->
-    <li class="showTtOptions">
-        <br/><br/>
-        <table border="2" class="sample">
+    <li class="showTtOptions time_table_lab">
+        <table  class="sample table_view">
             <tr>
                 <th>Day/Period</th>
                 <?php for($i=1;$i<=7;$i++){ ?>
@@ -86,7 +71,5 @@
         </table>
     </li>
 </ol>
-<br/>
-<br/>
-<input type="button" name="imageField" id="imageField" class="send button showTtOptions j_gen_form_submit" value="Save Time Table"/>
+<input type="button" name="imageField" id="imageField" class="m_t_10 button showTtOptions j_gen_form_submit gblue " value="Save Time Table"/>
 </form>

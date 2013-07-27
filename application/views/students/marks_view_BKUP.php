@@ -40,7 +40,7 @@ if(!empty($student_marks) && count($student_marks)){
     <?php if(!empty($displayData)) foreach ($displayData as $key => $value) { ?>
     <br/>
     <h4><?php echo $value['exam_name']; ?></h4>
-    <table border="2" class="sample">
+    <table class="sample table_view">
         <tr>
             <th>Subject name</th>
             <th>Marks Scored</th>

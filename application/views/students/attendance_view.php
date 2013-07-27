@@ -8,7 +8,7 @@ if(!empty($student_attendance) && count($student_attendance)){
 
     <br/>
     <h4>Attendance</h4>
-    <table border="2" class="sample">
+    <table class="sample table_view">
         <tr>
             <th>#</th>
             <th>Attended Days</th>

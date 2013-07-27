@@ -43,7 +43,7 @@ if(!empty($student_marks) && count($student_marks)){
 
     <br/>
     <h4><?php // echo $value['exam_name']; ?></h4>
-    <table border="2" class="sample">
+    <table class="sample table_view">
         <tr>
             <th>Subject name</th>
             <th>External</th>

@@ -132,7 +132,7 @@
                     </div>
                     <br/>
 
-                    <table border="2" class="sample b br5"  style="width: 95%;margin: 0 auto;">
+                    <table class="sample table_view b br5"  style="width: 95%;margin: 0 auto;">
                         <tr>
                             <th> Subject </th>
                             <th> Max Marks</th>

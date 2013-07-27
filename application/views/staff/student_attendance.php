@@ -10,7 +10,7 @@ if(!empty($students)){
         <input name="weekday_id"  type="hidden" value="<?php echo $weekday_id; ?>"/>
         <input name="subject_id"  type="hidden" value="<?php echo $subject_id; ?>"/>
         <input name="period_id"  type="hidden" value="<?php echo $period_id; ?>"/>
-        <table border="2" class="sample">
+        <table class="sample table_view">
             <tr>
                 <th>Student Number</th>
                 <th>Student Name</th>

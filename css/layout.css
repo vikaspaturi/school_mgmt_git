@@ -400,3 +400,9 @@ border-radius: 2px;
 	vertical-align: top;
 }
 /*End@@code for the Table*/
+
+.app ol li.time_table_lab{
+    margin-top: 20px;
+    overflow: auto;
+    padding: 0;
+}

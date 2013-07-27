@@ -26,7 +26,7 @@ if(count($data)){
     <input type="hidden" name="user_id" value="<?php if(isset($user_id)) echo $user_id; else echo 0;?>"/>
     <ol>
         <li>
-            <table border="2" class="sample">
+            <table class="sample table_view">
                 <tr>
                     <th> Time</th>
                     <th> Period</th>
