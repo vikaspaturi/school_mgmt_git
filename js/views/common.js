@@ -9,6 +9,7 @@ $.extend({
             }],
             height:150,
             width:300,
+            dialogClass: "",
             message:'Please Wait..'
        };
 
@@ -24,6 +25,7 @@ $.extend({
             height: config.height,
             width: config.width,
             buttons:config.buttons,
+            dialogClass: config.dialogClass,
             modal: true
         });
    },
