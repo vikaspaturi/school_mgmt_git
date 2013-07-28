@@ -104,10 +104,7 @@
 }
 .app .rightNav .rightNav_cnt { padding: 20px 20px 0 20px}
 
-/*.app .jqgrid_wrap { padding-right: 20px;}*/
-
 /*Start@@ Alert css*/
-
 
 .app .alert_info {
 	display: block;
@@ -255,6 +252,8 @@ border-radius: 2px;
 .app .chat_links a:active{color: #023D27;}
 .app .text.mdl_ip{ width: 160px}
 .app #password_form div.error{ margin-left: 124px}
+
+/*start@@code for jgrid design*/
 .app .ui-jqgrid div.loading{
 	background: url(images/32.gif) no-repeat center;
 	height: 36px;
@@ -266,8 +265,19 @@ border-radius: 2px;
 	text-indent: -90000px;
 	border: 0 !important;
 }
-.app .ui-jqgrid tr.jqgrow td{ white-space: normal; } 
+.app .ui-jqgrid.ui-widget-content{ background: #fff; border-width: 0 1px 1px}
+.app .ui-jqgrid .ui-jqgrid-htable th{ padding: 4px 2px; background: #FFFAF0; font-weight: bold}
+.app .ui-jqgrid tr.jqgrow td{ white-space: normal; padding: 6px 2px } 
 .app .ui-jqgrid .ui-jqgrid-bdiv{ min-height: 260px}
+.app .ui-jqgrid tr.jqgrow{ background: #FFFFF7}
+.app .ui-jqgrid tr.jqgrow.ui-priority-secondary{ 
+	background: #fff;
+	opacity: 1;
+	filter: Alpha(Opacity=100);
+}
+.app .ui-jqgrid tr.jqgrow.ui-state-hover{ border: 1px solid #E0CFC2; background: #FFF9F4}
+.app .ui-jqgrid tr.jqgrow.ui-state-highlight{ background: #FFEED3}
+/*End@@code for jgrid design*/
 
 /**start@@code for the college updates*/
 .app .collegeUpdates li{
