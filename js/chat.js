@@ -20,7 +20,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 var chatHeartBeatTimer;
 
 //var chat_url='http://localhost/mycollege/test_server/';
-var base_url='http://localhost/mycollege/test_server/';
+var base_url='http://localhost/school_mgmt/';
 var chat_url=base_url;
 
 var windowFocus = true;
