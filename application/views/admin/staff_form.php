@@ -111,7 +111,7 @@
 <ol>
     <li>
         <input type="button" name="imageField" id="imageField" class="gblue button j_gen_form_submit" value="Save"/>
-        <input type="button" name="imageField" id="imageField" class="send button" value="Back" onclick="javascript:window.location.reload();"/>
+        <input type="button" name="imageField" id="imageField" class="m_l_20 grey button" value="Back" onclick="javascript:window.location.reload();"/>
         <div class="clr"></div>
     </li>
 </ol>
