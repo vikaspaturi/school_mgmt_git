@@ -18,7 +18,7 @@
             <td>
                 <form id="appl_form" action="<?php echo site_url('admin/student_data'); ?>" method="POST">
                     <input id="id" name="user_id" type="hidden" class="text" value="<?php if (isset($v->user_id)) echo $v->user_id; ?>"/>
-                    <input type="submit" name="imageField" id="imageField" class="send button " value="View">
+                    <input type="submit" name="imageField" id="imageField" class="gblue button " value="View">
                 </form>
             </td>
         </tr>

@@ -30,7 +30,7 @@
             </li>
 			
 			<li>
-                <input type="submit" name="submit"  class="send button " value="Save"/>
+                <input type="submit" name="submit"  class="send button gblue " value="Save"/>
                 <div class="clr"></div>
             </li></ol>
     </form>

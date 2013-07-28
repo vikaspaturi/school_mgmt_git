@@ -53,7 +53,7 @@
                 </select>
             </li>
             <li>
-                <input type="submit" name="submit"  class="send button j_gen_form_submit gblue" value="Next "/>
+                <input type="submit" name="submit"  class="gblue button j_gen_form_submit gblue" value="Next "/>
                 <div class="clr"></div>
             </li>
         </ol>

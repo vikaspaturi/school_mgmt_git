@@ -13,7 +13,7 @@
         </li>
         <li>
             <input type="button" name="imageField" id="imageField" class="send button" value="Back" onclick="javascript:window.location.reload();"/>
-            <input type="button" name="imageField" id="imageField" class="send button j_gen_form_submit" value=" Next "/>
+            <input type="button" name="imageField" id="imageField" class="gblue button j_gen_form_submit" value=" Next "/>
             <div class="clr"></div>
         </li>
     </ol>

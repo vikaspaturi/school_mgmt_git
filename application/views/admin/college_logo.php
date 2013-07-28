@@ -9,6 +9,6 @@
 <?php } ?>
 <div class="clr"></div>
 <br/>
-<input type="button" name="imageField" id="imageField" class="send button " value="Change College Logo" onclick="window.location.href='<?php echo site_url('admin/edit_college_logo'); ?>'" />
+<input type="button" name="imageField" id="imageField" class=" button green" value="Change College Logo" onclick="window.location.href='<?php echo site_url('admin/edit_college_logo'); ?>'" />
 
 <div class="clr"></div>

@@ -296,7 +296,7 @@ class Office extends CI_Controller {
 			$this->load->view('office/mba_fee_details_table', $data);
 			}
 			else
-			echo "Student Number not found";
+			echo showBigError("Student Number not found");
 			
             //$this->load->view('office/fee_details_table', $data);
         }else{
@@ -603,7 +603,7 @@ $discount_details=$this->office_model->getDiscounts($user_id[0]->user_id);
 
        $this->load->view('office/student_collect_fee',$data);
             }else{
-                echo '<br/><p>Student Number not found. Please try again.</p>';
+                echo showBigError('<p>Student Number not found. Please try again.</p>');
             }
         }else{
             $data['content_page']='office/fee_student_profile';
@@ -631,7 +631,7 @@ $uby= $post['uby'];
 $receipt=time();
 $data['student_data']=$this->students_model->get_user_details($userid);
             if(empty($data['student_data'])){
-                echo '<br/><div class="error"> Student Not Found.!</div>';
+                echo showBigError('<div> Student Not Found.!</div>');
                 return true;
             }
 
@@ -695,7 +695,7 @@ $data['payment_details']=$this->office_model->get_student_payments($user_id[0]->
 $data['ffy']=$ffy;
                 $this->load->view('office/student_fee_history',$data);
             }else{
-                echo '<br/><p>Student Number not found. Please try again.</p>';
+                echo showBigError('<p>Student Number not found. Please try again.</p>');
             }
         }else{
             $data['content_page']='office/fee_payment_error';
@@ -831,7 +831,7 @@ if($this->input->post()){
 
                 $this->load->view('office/stu_fee_ledger_pdf',$data);
             }else{
-                echo '<br/><p>Student Number not found. Please try again.</p>';
+                echo showBigError('<p>Student Number not found. Please try again.</p>');
             }
 
         }else{
@@ -979,7 +979,7 @@ echo "</td></tr>";
 echo "</table>";
 }
 else
-echo "No Records Found";
+echo showBigError('No Records Found');
 }
 
 
@@ -1034,7 +1034,7 @@ echo "</td></tr>";
 echo "</table>";
 }
 else
-echo "No Records Found";
+echo showBigError('No Records Found');
 header("Content-disposition:attachment; filename=Daywisereports.xls");
 }
 
@@ -1544,7 +1544,7 @@ $this->load->view('common/base_template', $data);
 
 }
 else
-echo "No data Received";
+echo showBigError("No data Received");
 }
 
 function feebulkupdate()
@@ -1749,13 +1749,13 @@ header("Content-disposition:attachment; filename=cashbook.xls");
     if ($post) {
 
       if ($this -> debitvoucher_model -> check_debitvoucher($post)) {
-        echo '<br/><div class="error">Debit Voucher already exists.</div><a href="../office/addvoucher" ><br/><< Back To Adding</a>';
+        echo showBigError('<div>Debit Voucher already exists.</div>'); // <a href="../office/addvoucher" ><br/><< Back To Adding</a>';
         return;
       }
       
       $this -> debitvoucher_model -> addvoucher($post);
      // $this->debitvoucher_model->update_cashbook_debit($post);
-      echo '<br/><p>Debit Voucher saved Successfully.</p><a href="../office/debitvoucher" ><br/><< List Vouchers</a>';
+      echo showBigSuccess('<p>Debit Voucher saved Successfully.</p>'); // <a href="../office/debitvoucher" ><br/><< List Vouchers</a>');
     }
     else {
     	

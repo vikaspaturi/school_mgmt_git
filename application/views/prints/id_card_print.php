@@ -41,7 +41,7 @@ foreach($data as $k=>$v){?>
     <div style="clear:both;"></div>
 </div>
 <br/>
-<input type="button" name="imageField" id="imageField" class="send button  " value="Print" onclick="this.style.display='none'; window.print();">
+<input type="button" name="imageField" id="imageField" class="gblue button  " value="Print" onclick="this.style.display='none'; window.print();">
 <?php } }else{?>
 <br/>
 <p>No ID Card found.!</p>

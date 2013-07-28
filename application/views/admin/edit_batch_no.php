@@ -14,7 +14,7 @@
             </select>
         </li>
         <li>
-            <input type="submit" name="imageField" id="imageField" class="send button gblue" value="Save Batch No" />
+            <input type="submit" name="imageField" id="imageField" class=" button gblue" value="Save Batch No" />
             <div class="clr"></div>
         </li>
     </ol>

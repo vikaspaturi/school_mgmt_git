@@ -20,7 +20,7 @@
                     <label for="name">Student Name:*</label>
                     <input id="name" name="name" class="text"/>
                     <br class="clearfloat"/><br/>
-                    <input type="button" name="imageField" id="imageField" class="send button j_gen_form_submit" value="Search"/>
+                    <input type="button" name="imageField" id="imageField" class="gblue button j_gen_form_submit" value="Search"/>
                     <div class="clr"></div>
                 </li>
                 
@@ -49,7 +49,7 @@
                     <label for="branch">Branch:*</label>
                     <input id="branch" name="branch" class="text"/><br/>
                 </li><li>
-                    <input type="button" name="imageField" id="imageField" class="send button j_gen_form_submit" value="Release"/>
+                    <input type="button" name="imageField" id="imageField" class="gblue button j_gen_form_submit" value="Release"/>
                     <div class="clr"></div>
                 </li>
             </form>
@@ -64,7 +64,7 @@
             <form action="/students/conduct_certificate" id="appl_form" suc_msg="" err_msg="">
                 <input id="" name="rel" class="text" type="hidden" value="squeeze_entire_network"/>
                 <li>
-                    <input type="button" name="imageField" id="imageField" class="send button j_gen_form_submit" value=" Squeeze the Entire Network "/>
+                    <input type="button" name="imageField" id="imageField" class="gblue button j_gen_form_submit" value=" Squeeze the Entire Network "/>
                     <div class="clr"></div>
                 </li>
             </form>

@@ -14,7 +14,7 @@
         <pre>ADDRESS			:	HYDERABAD</pre>
         <pre>MOBILE Number		:	0123456789</pre>
         <br/>
-        <input type="button" name="imageField" id="imageField" class="send button  j_gen_form_submit" value="Print" onclick="this.style.display='none'; window.print();">
+        <input type="button" name="imageField" id="imageField" class="gblue button  j_gen_form_submit" value="Print" onclick="this.style.display='none'; window.print();">
     </div>
     <div style="clear:both;"></div>
 </div>

@@ -35,8 +35,8 @@ class Student_registration extends CI_Controller {
             if(isset($post['sem_id'])){
                 $this->admin_model->save_student_semester($post['user_id'],$post['sem_id']);
             }
-            echo '<br/><p> User saved successfully.</p><br/><br/>
-                    <input type="button" name="imageField" id="imageField" class="send button" value="Back" onclick="javascript:window.location=\''.site_url('student_registration').'\';"/>';
+            echo showBigSuccess('<p> User saved successfully.</p>'); // <br/><br/>
+                    // <input type="button" name="imageField" id="imageField" class="send button" value="Back" onclick="javascript:window.location=\''.site_url('student_registration').'\';"/>';
         }
     }
 

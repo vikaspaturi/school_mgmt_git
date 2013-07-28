@@ -15,7 +15,7 @@
             </select>
         </li>
         <li>
-            <input type="submit" name="imageField" id="imageField" class="send button gblue j_gen_form_submit" value="Save Academic Year" />
+            <input type="submit" name="imageField" id="imageField" class=" button gblue j_gen_form_submit" value="Save Academic Year" />
             <div class="clr"></div>
         </li>
     </ol>

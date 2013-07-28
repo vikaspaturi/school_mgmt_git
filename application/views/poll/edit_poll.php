@@ -30,7 +30,7 @@
 
             <li>
                 <input type="hidden" name="submit"  value="Save"/>
-                <input type="button" name="submit2"  class="send button j_gen_form_submit" value="Save"/>
+                <input type="button" name="submit2"  class="gblue button j_gen_form_submit" value="Save"/>
                 <div class="clr"></div>
             </li>
         </ol>

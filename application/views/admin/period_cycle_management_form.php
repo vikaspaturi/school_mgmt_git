@@ -39,7 +39,7 @@
             </select>
         </li>
         <li>
-            <input type="button" name="imageField" id="imageField" class="send button gblue j_gen_form_submit" value="<?php if(isset($college_data[0]['id'])) echo 'Save'; else echo 'Generate'; ?> Period Cycle" />
+            <input type="button" name="imageField" id="imageField" class=" button gblue j_gen_form_submit" value="<?php if(isset($college_data[0]['id'])) echo 'Save'; else echo 'Generate'; ?> Period Cycle" />
             <div class="clr"></div>
         </li>
     </ol>

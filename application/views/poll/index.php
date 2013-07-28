@@ -21,7 +21,7 @@
 		<?php 
 		} if($p['is_voted']==''){ ?>
         <li style="border: 1px solid #CCC;border-top: none; padding-left: 30px; padding-bottom: 10px;">
-            <input type="submit" name="submit"  class="send button " value="Vote"/>
+            <input type="submit" name="submit"  class="gblue button " value="Vote"/>
             <div class="clr"></div>
         </li><?php }?>
     </form>

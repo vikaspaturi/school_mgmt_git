@@ -16,7 +16,7 @@
                 <label for="name">Student Name:*</label>
                 <input id="name" name="name" class="text"/>
                 <br/>
-                <input type="button" name="imageField" id="imageField" class="send button j_gen_form_submit" value="Search"/>
+                <input type="button" name="imageField" id="imageField" class="gblue button j_gen_form_submit" value="Search"/>
                 <div class="clr"></div>
             </li>
         </ul>

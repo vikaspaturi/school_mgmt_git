@@ -250,6 +250,10 @@ function change_password(){
         width:350,
         height:'auto',
         dialogClass: "bounceIn animation_setting",
+        show: {
+            effect: "blind",
+            duration: 1000
+        },
         buttons:
             [{
                 text: "Cancel",

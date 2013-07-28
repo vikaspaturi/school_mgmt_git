@@ -115,7 +115,7 @@
             <label for="username" class="ollilabel">Receivers Signature :</label><label class="ollilabel"><b></b></label>
         </li>
         <li>
-            <input type="button" name="imageField" id="imageField" class="send button j_gen_form_submit" value="Create Voucher & Print" />
+            <input type="button" name="imageField" id="imageField" class="gblue button j_gen_form_submit" value="Create Voucher & Print" />
             <div class="clr"></div>
         </li>
          </ol>

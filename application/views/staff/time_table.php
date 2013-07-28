@@ -59,4 +59,4 @@
 </ol>
 <br/>
 <br/>
-<input type="button" name="imageField" id="imageField" class="send button  " value="Print" onclick="this.style.display='none'; window.print();">
+<input type="button" name="imageField" id="imageField" class="gblue button  " value="Print" onclick="this.style.display='none'; window.print();">

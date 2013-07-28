@@ -28,7 +28,7 @@ class Staff extends CI_Controller {
             $post=$this->input->post();
             $post['user_id']=$this->ci_user_details->id;
             $this->my_db_lib->save_record($post,'staff_records');
-            echo '<p>Profile details updated succesfully</p>';
+            echo showBigSuccess('<p>Profile details updated succesfully</p>');
         }else{
             // print_r($this->ci_user_details->id);
             $data['data']=$this->staff_model->getProfileDetails($this->ci_user_details->id);
@@ -48,7 +48,7 @@ class Staff extends CI_Controller {
             $post=$this->input->post();
             $this->my_db_lib->save_record($post,'time_table');
             $this->send_staff_tt_sms($post['user_id']);
-            echo '<p>Time Table Updated Successfully.</p>';
+            echo showBigSuccess('<p>Time Table Updated Successfully.</p>');
         }else{            
             $data['staff']=$this->staff_model->get_staff_users();
             $data['content_page']='staff/update_time_table';
@@ -78,7 +78,7 @@ class Staff extends CI_Controller {
                 $this->my_db_lib->save_record($row,'student_time_table');
             }
             $this->send_student_tt_sms($post['branch_id'],$post['year']);
-            echo '<p>Time Table Updated Successfully.</p>'; //'<pre>'; print_r($post); echo '</pre>';
+            echo showBigSuccess('<p>Time Table Updated Successfully.</p>'); //'<pre>'; print_r($post); echo '</pre>';
 
         }else{
             $data['days']=$this->staff_model->get_time_table_days();
@@ -129,7 +129,7 @@ class Staff extends CI_Controller {
             $post['branch']=$post['branch_id'];
             $post['user_id']=$this->ci_user_details->id;
             $this->my_db_lib->save_record($post,'question_papers');
-            echo '<p>Question paper uploaded succesfully</p>';
+            echo showBigSuccess('<p>Question paper uploaded succesfully</p>');
         }else{
             $data['content_page']='staff/upload_q_papers';
             $this->load->view('common/base_template',$data);
@@ -231,7 +231,7 @@ class Staff extends CI_Controller {
             if($data=$this->session->userdata('staff_preview_id_card')){
                 $this->my_db_lib->save_record($data,'id_card_applications');
                 $this->session->unset_userdata('staff_preview_id_card');
-                echo '<br/><p> ID Card request submitted successfully</p>';
+                echo showBigSuccess('<p> ID Card request submitted successfully</p>');
             }
         }else{
             $data['content_page']='staff/id_card';
@@ -264,7 +264,7 @@ class Staff extends CI_Controller {
 
 
             }else{
-                echo '<br/><p>Student Number not found. Please try again.</p>';
+                echo showBigError('<p>Student Number not found. Please try again.</p>');
             }
         }else{
             $data['content_page']='staff/student_profile';
@@ -346,7 +346,7 @@ class Staff extends CI_Controller {
             $approver_id=$this->session->userdata('user_id');
             $status=$post['update'];
             $this->staff_model->update_nodue($appl_id,$approver_id,$status);
-            echo 'No Due status updated';
+            echo showBigSuccess('No Due status updated');
         }
     }
 
@@ -417,7 +417,7 @@ class Staff extends CI_Controller {
             $post=$this->input->post();
             $post['user_id']=$this->ci_user_details->id;
             $this->my_db_lib->save_record($post,'assignments');
-            echo '<br/><p>Assignment submitted succesfully.</p>';
+            echo showBigSuccess('<p>Assignment submitted succesfully.</p>');
         }else{
             $data['content_page']='staff/upload_assignments';
             $this->load->view('common/base_template',$data);
@@ -516,7 +516,7 @@ class Staff extends CI_Controller {
             $post=$this->input->post();
             $post['user_id']=$this->ci_user_details->id;
             $this->my_db_lib->save_record($post,'library_pdfs');
-            echo '<br/><p>PDF submitted succesfully.</p>';
+            echo showBigSuccess('<p>PDF submitted succesfully.</p>');
         }else{
             $data['content_page']='staff/upload_pdfs';
             $this->load->view('common/base_template',$data);
@@ -571,7 +571,7 @@ class Staff extends CI_Controller {
             $post=$this->input->post();
             $post['user_id']=$this->ci_user_details->id;
             $this->my_db_lib->save_record($post,'videos');
-            echo '<br/><p>Video submitted succesfully.</p>';
+            echo showBigSuccess('<p>Video submitted succesfully.</p>');
         }else{
             $data['content_page']='staff/upload_videos';
             $this->load->view('common/base_template',$data);
@@ -749,7 +749,7 @@ class Staff extends CI_Controller {
                 }
             $this->db->trans_complete();
             
-            echo '<div class="info_big"><p>Leave application successfully submited.</p></div>';
+            echo showBigSuccess('<div class=""><p>Leave application successfully submited.</p></div>');
 //            if ($this->db->trans_status() === FALSE){
 //                echo '<div class="error"><p>Leave application failed. Please try again</p></div>';
 //            }

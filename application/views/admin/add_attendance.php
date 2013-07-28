@@ -32,7 +32,7 @@
             <input class="text" type="text" name="tot_days" value="<?php if(isset($s_data['tot_days'])) echo $s_data['tot_days']; ?>"/>
         </li>
         <li>
-            <input type="button" name="imageField" id="imageField" class="send button j_gen_form_submit" value="<?php if(isset($subject_edit_data[0]['id'])) echo 'Update'; else echo 'Add'; ?> Attendance" />
+            <input type="button" name="imageField" id="imageField" class="gblue button j_gen_form_submit" value="<?php if(isset($subject_edit_data[0]['id'])) echo 'Update'; else echo 'Add'; ?> Attendance" />
             <div class="clr"></div>
         </li>
     </ol>

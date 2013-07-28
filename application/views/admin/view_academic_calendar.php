@@ -83,7 +83,7 @@
         
     </li>
     <li>
-        <input type="button" name="" id="" class="send button " value=" Back To Calendars " style="margin-left: 20px;" onclick="javascript:window.location='<?php echo site_url('admin/academic_calendar'); ?>'"/>
+        <input type="button" name="" id="" class=" button grey " value=" Back To Calendars " style="margin-left: 20px;" onclick="javascript:window.location='<?php echo site_url('admin/academic_calendar'); ?>'"/>
         <div class="clr"></div>
     </li>
 </ol>

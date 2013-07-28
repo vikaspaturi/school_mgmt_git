@@ -102,7 +102,7 @@
                 <input id="unique_number" name="unique_number" class="text"/>
             </li>-->
             <li>
-                <input type="button" class="send button j_gen_form_submit" value="Include the Book"/><br />
+                <input type="button" class="gblue button j_gen_form_submit" value="Include the Book"/><br />
             </li>
         </ol>
     </form>

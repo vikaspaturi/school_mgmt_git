@@ -170,7 +170,7 @@
                    echo $student_details[0]->email; ?>" readonly="readonly"/>
     </li>
     <li>
-<!--        <input type="button" name="imageField" id="imageField" class="send button j_gen_form_submit" value="Submit"/>-->
+<!--        <input type="button" name="imageField" id="imageField" class="gblue button j_gen_form_submit" value="Submit"/>-->
         <div class="clr"></div>
     </li>
 </ol>

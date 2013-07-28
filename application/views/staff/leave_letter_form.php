@@ -64,7 +64,7 @@
             <br/>
         </li>
         <li>
-            <input type="button" name="imageField" id="imageField" class="send button j_gen_form_submit" value="Apply"/>
+            <input type="button" name="imageField" id="imageField" class="gblue button j_gen_form_submit" value="Apply"/>
             <div class="clr"></div>
         </li>
         
