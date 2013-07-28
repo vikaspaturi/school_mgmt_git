@@ -54,7 +54,6 @@
         
         <li>
             <label for="marks_types_id">Internals:* </label>
-            <br/>
             <?php if(!empty($marks_types)){ ?>
                 <?php foreach ($marks_types as $key => $value) { if($value->id!=1){ /*Not Displaying External*/?>
             <label>
