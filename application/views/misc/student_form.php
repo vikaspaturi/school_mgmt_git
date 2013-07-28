@@ -220,7 +220,7 @@ Design by http://www.MyCollege.org
 <br/>
 <ol>
     <li>
-        <input type="button" name="imageField" id="imageField" class="send button j_gen_form_submit" value="Save"/>
+        <input type="button" name="imageField" id="imageField" class="gblue button j_gen_form_submit" value="Save"/>
 <!--        <input type="button" name="imageField" id="imageField" class="send button" value="Back" onclick="javascript:window.location.reload();"/>-->
         <div class="clr"></div>
     </li>

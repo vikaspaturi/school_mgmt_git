@@ -9,29 +9,37 @@ if(count($data) && $data){
 foreach($data as $k=>$v){?>
 <form id="appl_form" action="/students/bus_pass" >
     <input type="hidden" name="preview" value="1"/>
-    <div style="border:2px solid; width:600px;position:relative;">
-        <h4 style="width:115px; margin:0 auto;">LAQSHYA COLLEGE</h4>
-    <!--    <div>
-            <img src="logo.png" width="50" height="50" style="position: absolute; top:60px; left:510px;">
-        </div>-->
-        <img src="<?php echo base_url(); ?>css/images/college_logo.png"  height="60" style="position: absolute; top:5px; right: 0px;">
-        <img src="<?php echo base_url(); echo (isset($v['photo']) && !empty($v['photo']))?'uploads/'.$v['photo']:'css/images/no_photo.png'; ?>" id="photo" width="100" height="120" title="pic" style="position: absolute; top:80px; left:15px;">
-        <div style="margin-left:160px;margin-top: 45px;">
-
-            <pre>STUDENT NAME		:	<?php echo $v['name']; ?></pre>
-            <pre>STUDENT NUMBER		:	<?php echo $v['student_number']; ?></pre>
-            <pre>BRANCH			:	<?php echo get_select_name($v['branch'],'branches'); ?></pre>
-            <pre>COURSE		        :	<?php echo get_select_name($v['course'],'courses'); ?></pre>
-            <pre>PICK UP POINT		:	<?php echo get_select_name($v['start_from'],'boarding_points'); ?></pre>
-            <pre>ISSUED ON  		:	<?php echo date('d-m-Y'); ?></pre>
-            <br/>
-            
+    <div class="id_userview">
+        <div class="belt_top p_a"></div>
+        
+        <div class="inner">
+            <div class="photo_banner">
+                <img src="<?php echo base_url(); ?>css/images/college_logo.png" class="f_l" width="60" height="60" />
+                <img src="<?php echo base_url(); echo (isset($v['photo']) && !empty($v['photo']))?'uploads/'.$v['photo']:'css/images/no_photo.png'; ?>" class="f_r" id="photo" width="100" height="120" title="pic"/>
+                <div class="c_b"></div>
+            </div>
+            <div class="stud_det_panel">
+                <div class="std_lst">
+                    <label>STUDENT NAME:</label>
+                    <span>	<?php echo $v['name']; ?></span>
+                </div>
+                <div class="std_lst">
+                    <label>STUDENT NUMBER:</label>
+                    <span><?php echo $v['student_number']; ?></span>
+                </div>
+                <div class="std_lst"><label>BRANCH:</label>	<span><?php echo get_select_name($v['branch'],'branches'); ?></span></div>
+                <div class="std_lst"><label>COURSE:</label> <span><?php echo get_select_name($v['course'],'courses'); ?></span></div>
+                <div class="std_lst"><label>PICK UP POINT:</label> <span>	<?php echo get_select_name($v['start_from'],'boarding_points'); ?></span></div>
+                <div class="std_lst"><label>ISSUED ON:</label> <span>	<?php echo date('d-m-Y'); ?></span></div>
+                <div class="c_b"></div>
+            </div>
+            <div style="clear:both;"></div>
         </div>
-        <div style="clear:both;"></div>
     </div>
-    <br/>
-    <input type="button" name="imageField" id="imageField" class="send button  " value="Back" onclick="javascript:window.location.reload();"/>
-    <input type="button" name="imageField" id="imageField" class="send button  j_gen_form_submit" value="Confirm"/>
+    <div class="m_t_20">
+        <input type="button" name="imageField" id="imageField" class=" button grey " value="Back" onclick="javascript:window.location.reload();"/>
+        <input type="button" name="imageField" id="imageField" class=" button  j_gen_form_submit gblue" value="Confirm"/>
+    </div>
 </form>
 <?php } }else{?>
 <br/>

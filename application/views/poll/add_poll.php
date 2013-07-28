@@ -55,7 +55,7 @@
             <input type="text" name="option[]" id="option[]" value="" class="text" />
             </li>
 			<li>
-                <input type="submit" name="submit"  class="send button gblue j_gen_form_submit" value="Save"/>
+                <input type="submit" name="submit"  class=" button gblue j_gen_form_submit" value="Save"/>
                 <div class="clr"></div>
             </li></ol>
     </form>

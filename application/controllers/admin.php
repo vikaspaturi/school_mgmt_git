@@ -205,7 +205,7 @@ else
         if($this->input->post()){
             $post=$this->input->post();
             $this->my_db_lib->save_record($post,'student_records');
-            echo '<br/><p>Student details saved Successfully.</p>';
+            echo showBigSuccess('<p>Student details saved Successfully.</p>');
         }
     }
 
@@ -407,7 +407,7 @@ else
 				
             }
             if($post['users_type_id']!=1){
-                echo '<br/><p> User saved successfully.</p><br/><input type="button" name="imageField" id="imageField" class="send button" value="Back" onclick="javascript:window.location.reload();"/>';
+                echo showBigSuccess('<p> User saved successfully.</p>'); // <br/><input type="button" name="imageField" id="imageField" class="send button" value="Back" onclick="javascript:window.location.reload();"/>
             }else{
                 $data['content_page']='admin/userAdded';
                 $this->load->view('common/base_template',$data);
@@ -1032,7 +1032,7 @@ where qp.id='".$this->input->post('id')."'";
         $post=$this->input->post();
         if($post){
             $this->my_db_lib->save_record($post,'students_notice_board');
-            echo '<br/><p>Message saved Successfully.</p><a href="javascript:void(0);" onclick="javascript:window.location.reload();"><< Back To List</a>';
+            echo showBigSuccess('<p>Message saved Successfully.</p>'); // <a href="javascript:void(0);" onclick="javascript:window.location.reload();"><< Back To List</a>';
         }
     }
 
@@ -1087,11 +1087,11 @@ where qp.id='".$this->input->post('id')."'";
         $post=$this->input->post();
         if($post){
             if($this->admin_model->check_subject_grid($post)){
-                echo '<br/><div class="error">Subject already exists for Branch Semester.</div><a href="javascript:void(0);" onclick="javascript:edit_subject_grid(0);"> <br/> << Back To Adding</a>';
+                echo showBigError('<div class="">Subject already exists for Branch Semester.</div>'); //<a href="javascript:void(0);" onclick="javascript:edit_subject_grid(0);"> <br/> << Back To Adding</a>';
                 return;
             }
             $this->my_db_lib->save_record($post,'branch_semister_subject');
-            echo '<br/><p>Subject saved Successfully.</p><a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
+            echo showBigSuccess('<p>Subject saved Successfully.</p>'); // <a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
         }
     }
 
@@ -1313,11 +1313,11 @@ function edit_marks($id=0,$uid=0){
         $post=$this->input->post();
         if($post){
             if($this->admin_model->check_system_subjects($post['name'])){
-                echo '<br/><div class="error">Subject already exists.</div><a href="javascript:void(0);" onclick="javascript:edit_subject_grid(0);"> <br/> << Back To Adding</a>';
+                echo showBigError('<div class="">Subject already exists.</div>'); // <a href="javascript:void(0);" onclick="javascript:edit_subject_grid(0);"> <br/> << Back To Adding</a>';
                 return;
             }
             $this->my_db_lib->save_record($post,'subjects');
-            echo '<br/><p>Subject saved Successfully.</p><a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
+            echo showBigSuccess('<p>Subject saved Successfully.</p>'); // <a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
         }
     }
 
@@ -1454,7 +1454,7 @@ function edit_poll(){
             $poll_id=$this->input->post('id');
             $post=$_POST;
             $this->my_db_lib->save_record($_POST,'polls');
-            echo 'Poll Saved Successfully.<br/><a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
+            echo showBigSuccess('Poll Saved Successfully.'); // <br/><a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
             // $data['content_page']='poll/edit_poll_success';
             // $this->load->view('common/base_template',$data);
             // redirect('admin/addpoll');
@@ -1610,7 +1610,7 @@ $result="<a href='javascript:void(0);' onclick='javascript:result_polls(".$v['id
         if($post){
             $id=$post['id'];
             $this->admin_model->delete_colleges($id);
-            echo '<br/><div class="error">College Deleted.</div><a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
+            echo showBigSuccess('<div class="">College Deleted.</div>'); // <a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
         }
     }
 
@@ -1619,7 +1619,7 @@ $result="<a href='javascript:void(0);' onclick='javascript:result_polls(".$v['id
         $post=$this->input->post();
         if($post){
             if($this->admin_model->check_college_name($post)){
-                // echo '<br/><div class="error">College Name already exists.</div><a href="javascript:void(0);" onclick="javascript:edit_college_management(0);"> <br/> << Back To Adding</a>';
+                // echo '<br/><div >College Name already exists.</div><a href="javascript:void(0);" onclick="javascript:edit_college_management(0);"> <br/> << Back To Adding</a>';
                 $this->session->set_flashdata('error_msg', 'College Name already exists. Please try again.');
                 redirect('admin/college_management');
                 return;
@@ -1706,7 +1706,7 @@ $result="<a href='javascript:void(0);' onclick='javascript:result_polls(".$v['id
         if($post){
             $id=$post['id'];
             $this->admin_model->delete_courses($id);
-            echo '<br/><div class="error">Course Deleted.</div><a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
+            echo showBigSuccess('<div class="">Course Deleted.</div>'); // <a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
         }
     }
 
@@ -1715,11 +1715,11 @@ $result="<a href='javascript:void(0);' onclick='javascript:result_polls(".$v['id
         $post=$this->input->post();
         if($post){
             if($this->admin_model->check_course_name($post)){
-                echo '<br/><div class="error">Course Name already exists for this College.</div><a href="javascript:void(0);" onclick="javascript:edit_course_management(0);"> <br/> << Back To Adding</a>';
+                echo showBigError('<div class="">Course Name already exists for this College.</div>'); // <a href="javascript:void(0);" onclick="javascript:edit_course_management(0);"> <br/> << Back To Adding</a>';
                 return;
             }
             $this->my_db_lib->save_record($post,'courses');
-            echo '<br/><p>Course saved Successfully.</p><a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
+            echo showBigSuccess('<p>Course saved Successfully.</p>'); // <a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
         }
     }
 
@@ -1730,11 +1730,11 @@ $result="<a href='javascript:void(0);' onclick='javascript:result_polls(".$v['id
                 if(!empty($v)){
                     $post['name']=$v;
                     if($this->admin_model->check_course_name($post)){
-                        echo '<br/><div class="error">Course Name '.$v.' already exists for this College.</div>';
+                        echo '<br/><div >Course Name '.$v.' already exists for this College.</div>';
                         continue ;
                     }
                     $this->my_db_lib->save_record($post,'courses');
-                    echo '<br/><p>Course '.$v.' saved Successfully.</p>';
+                    echo showBigSuccess('<p>Course '.$v.' saved Successfully.</p>');
                 }
             }
             echo '<br/><a href="javascript:void(0);" onclick="javascript:edit_course_management(0);"> <br/> << Back To Adding</a><a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
@@ -1787,14 +1787,14 @@ $result="<a href='javascript:void(0);' onclick='javascript:result_polls(".$v['id
     			
     			
     			if($this->admin_model->check_regulation_name($post)){
-    				echo '<br/><div class="error">Section Name '.$post['section'].' already exists for this Semester, Branch, Course in the College.</div>';
+    				echo showBigError('<div class="">Section Name '.$post['section'].' already exists for this Semester, Branch, Course in the College.</div>');
     	
     			}
     			
     	
     			else{
     				$section_id=$this->my_db_lib->save_record($post,'regulations');
-    				echo '<br/><p>Regulation'.$post['name'].' saved Successfully.</p>';
+    				echo showBigSuccess('<p>Regulation'.$post['name'].' saved Successfully.</p>');
     				echo '<br/><a href="javascript:void(0);" onclick="javascript:edit_regulation_management(0);"> <br/> << Back To Adding</a><a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
     			}
     	
@@ -1828,7 +1828,7 @@ $result="<a href='javascript:void(0);' onclick='javascript:result_polls(".$v['id
     		$post=$this->input->post();
     		if($post){
     			if($this->admin_model->check_regulation_name($post)){
-    				echo '<br/><div class="error">Course Name already exists for this College.</div><a href="javascript:void(0);" onclick="javascript:edit_course_management(0);"> <br/> << Back To Adding</a>';
+    				echo '<br/><div >Course Name already exists for this College.</div><a href="javascript:void(0);" onclick="javascript:edit_course_management(0);"> <br/> << Back To Adding</a>';
     				return;
     			}
     			$this->my_db_lib->save_record($post,'regulations');
@@ -1844,7 +1844,7 @@ $result="<a href='javascript:void(0);' onclick='javascript:result_polls(".$v['id
     		if($post){
     			$id=$post['id'];
     			$this->admin_model->delete_regulation($id);
-    			echo '<br/><div class="error">regulation Deleted.</div><a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
+    			echo showBigSuccess('<div class="">regulation Deleted.</div>'); // <a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
     		}
     	}
     
@@ -1902,7 +1902,7 @@ $result="<a href='javascript:void(0);' onclick='javascript:result_polls(".$v['id
         if($post){
             $id=$post['id'];
             $this->admin_model->delete_branches($id);
-            echo '<br/><div class="error">Course Deleted.</div><a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
+            echo showBigSuccess('<div >Course Deleted.</div>'); // <a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
         }
     }
 
@@ -1914,14 +1914,14 @@ $result="<a href='javascript:void(0);' onclick='javascript:result_polls(".$v['id
                 if(!empty($v)){
                     $post['name']=$v;
                     if($this->admin_model->check_branch_name($post)){
-                        echo '<br/><div class="error">Branch Name '.$v.' already exists for this Course in the College.</div>';
+                        echo showBigSuccess('<div class="">Branch Name '.$v.' already exists for this Course in the College.</div>');
                         continue ;
                     }else if($this->admin_model->check_branch_count_exceded($post) && $post['status']!='0'){ // Not checking if updating to InActive
-                        echo '<br/><div class="error">Only 10 Branches can be added to a Course in a College.</div>';
+                        echo showBigError('<div class="">Only 10 Branches can be added to a Course in a College.</div>');
                         continue ;
                     }
                     $this->my_db_lib->save_record($post,'branches');
-                    echo '<br/><p>Branch '.$v.' saved Successfully.</p>';
+                    echo showBigSuccess('<p>Branch '.$v.' saved Successfully.</p>');
                 }
             }
             echo '<br/><a href="javascript:void(0);" onclick="javascript:edit_branch_management(0);"> <br/> << Back To Adding</a><a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
@@ -1982,7 +1982,7 @@ $result="<a href='javascript:void(0);' onclick='javascript:result_polls(".$v['id
         if($post){
             $id=$post['id'];
             $this->admin_model->delete_semester($id);
-            echo '<br/><div class="error">Semester Deleted.</div><a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
+            echo showBigSuccess('<div class="">Semester Deleted.</div>'); // <a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
         }
     }
 
@@ -1994,14 +1994,14 @@ $result="<a href='javascript:void(0);' onclick='javascript:result_polls(".$v['id
                 if(!empty($v)){
                     $post['name']=$v;
                     if($this->admin_model->check_semester_name($post)){
-                        echo '<br/><div class="error">Semester Name '.$v.' already exists for this Branch in the College.</div>';
+                        echo showBigError('<div class="">Semester Name '.$v.' already exists for this Branch in the College.</div>');
                         continue ;
                     }else if($this->admin_model->check_semester_count_exceded($post) && $post['status']!='0'){ // Not checking if updating to InActive
-                        echo '<br/><div class="error">Only 10 Semesters can be added to a Branch, Course in a College.</div>';
+                        echo showBigError('<div >Only 10 Semesters can be added to a Branch, Course in a College.</div>');
                         continue ;
                     }
                     $this->my_db_lib->save_record($post,'semisters');
-                    echo '<br/><p>Semester '.$v.' saved Successfully.</p>';
+                    echo showBigSuccess('<p>Semester '.$v.' saved Successfully.</p>');
                 }
             }
             echo '<br/><a href="javascript:void(0);" onclick="javascript:edit_semester_management(0);"> <br/> << Back To Adding</a><a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
@@ -2076,7 +2076,7 @@ $result="<a href='javascript:void(0);' onclick='javascript:result_polls(".$v['id
         if($post){
             $id=$post['id'];
             $this->admin_model->delete_subject($id);
-            echo '<br/><div class="error">Subject Deleted.</div><a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
+            echo showBigSuccess('<div class="">Subject Deleted.</div>');  // <a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
         }
     }
 
@@ -2088,14 +2088,14 @@ $result="<a href='javascript:void(0);' onclick='javascript:result_polls(".$v['id
                 if(!empty($v)){
                     $post['name']=$v;
                     if($this->admin_model->check_subject_name($post)){
-                        echo '<br/><div class="error">Subject Name '.$v.' already exists for this Semester, Branch, Course in the College.</div>';
+                        echo showBigError('<div class="">Subject Name '.$v.' already exists for this Semester, Branch, Course in the College.</div>');
                         continue ;
                     }else if($this->admin_model->check_subject_count_exceded($post) && $post['status']!='0'){ // Not checking if updating to InActive
-                        echo '<br/><div class="error">Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>';
+                        echo showBigError('<div class="">Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>');
                         continue ;
                     }
                     $this->my_db_lib->save_record($post,'subjects');
-                    echo '<br/><p>Subject '.$v.' saved Successfully.</p>';
+                    echo showBigSuccess('<p>Subject '.$v.' saved Successfully.</p>');
                 }
             }
             echo '<br/><a href="javascript:void(0);" onclick="javascript:add_subject_management(0);"> <br/> << Back To Adding</a>
@@ -2116,321 +2116,321 @@ $result="<a href='javascript:void(0);' onclick='javascript:result_polls(".$v['id
 		 {
 		 //echo $post['subject1'].'-'.$post['credits1'];
 		 if($this->admin_model->check_subject_name1($post['subject1'],$college_id,$course_id,$branch_id,$semister_id)){
-                        echo '<br/><div class="error">Subject Name already exists for this Semester, Branch, Course in the College.</div>';
+                        echo showBigError('<div class="">Subject Name already exists for this Semester, Branch, Course in the College.</div>');
                        
                     }else if($this->admin_model->check_subject_count_exceded1($college_id,$course_id,$branch_id,$semister_id)){ // Not checking if updating to InActive
-                        echo '<br/><div class="error">Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>';
+                        echo showBigError('<div class="">Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>');
                      //   continue ;
                     }
                    else{
-				   $stype=$post['subject_type_id1'];
-				   $this->admin_model->add_subject($ayear,$college_id,$course_id,$branch_id,$semister_id,$stype,$post['subject1'],$post['credits1']);
-				   }
-                   echo '<br/><p>Operation Performed Successfully.</p>';
+                        $stype=$post['subject_type_id1'];
+                        $this->admin_model->add_subject($ayear,$college_id,$course_id,$branch_id,$semister_id,$stype,$post['subject1'],$post['credits1']);
+                    }
+                   echo showBigSuccess('<p>Operation Performed Successfully.</p>');
 		 }
 		if((isset($post['subject2']))&&(isset($post['credits2'])))
 		 {
 		 //echo $post['subject2'].'-'.$post['credits2'];
 		 if($this->admin_model->check_subject_name1($post['subject2'],$college_id,$course_id,$branch_id,$semister_id)){
-                        echo '<br/><div class="error">Subject Name already exists for this Semester, Branch, Course in the College.</div>';
+                        echo showBigError('<div class="">Subject Name already exists for this Semester, Branch, Course in the College.</div>');
                        
                     }else if($this->admin_model->check_subject_count_exceded1($college_id,$course_id,$branch_id,$semister_id)){ // Not checking if updating to InActive
-                        echo '<br/><div class="error">Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>';
+                        echo showBigError('<div class="">Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>');
                      //   continue ;
                     }
                    else{
-				   $stype=$post['subject_type_id2'];
-				   $this->admin_model->add_subject($ayear,$college_id,$course_id,$branch_id,$semister_id,$stype,$post['subject2'],$post['credits2']);
-				   }
-                   echo '<br/><p>Operation Performed Successfully.</p>';
+                        $stype=$post['subject_type_id2'];
+                        $this->admin_model->add_subject($ayear,$college_id,$course_id,$branch_id,$semister_id,$stype,$post['subject2'],$post['credits2']);
+                    }
+                   echo showBigSuccess('<p>Operation Performed Successfully.</p>');
 
 		 }
 		if((isset($post['subject3']))&&(isset($post['credits3'])))
 		 {		 //echo $post['subject2'].'-'.$post['credits2'];
 		 if($this->admin_model->check_subject_name1($post['subject3'],$college_id,$course_id,$branch_id,$semister_id)){
-                        echo '<br/><div class="error">Subject Name already exists for this Semester, Branch, Course in the College.</div>';
+                        echo showBigError('<div class="">Subject Name already exists for this Semester, Branch, Course in the College.</div>');
                        
                     }else if($this->admin_model->check_subject_count_exceded1($college_id,$course_id,$branch_id,$semister_id)){ // Not checking if updating to InActive
-                        echo '<br/><div class="error">Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>';
+                        echo showBigError('<div class="">Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>');
                      //   continue ;
                     }
                    else{
 				   $stype=$post['subject_type_id3'];
 				   $this->admin_model->add_subject($ayear,$college_id,$course_id,$branch_id,$semister_id,$stype,$post['subject3'],$post['credits3']);
 				   }
-                   echo '<br/><p>Operation Performed Successfully.</p>';
+                   echo showBigSuccess('<p>Operation Performed Successfully.</p>');
 				   }
 		if((isset($post['subject4']))&&(isset($post['credits4'])))
 		 {
 		 		 //echo $post['subject2'].'-'.$post['credits2'];
 		 if($this->admin_model->check_subject_name1($post['subject4'],$college_id,$course_id,$branch_id,$semister_id)){
-                        echo '<br/><div class="error">Subject Name already exists for this Semester, Branch, Course in the College.</div>';
+                        echo showBigError('<div class="">Subject Name already exists for this Semester, Branch, Course in the College.</div>');
                        
                     }else if($this->admin_model->check_subject_count_exceded1($college_id,$course_id,$branch_id,$semister_id)){ // Not checking if updating to InActive
-                        echo '<br/><div class="error">Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>';
+                        echo showBigError('<div class="">Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>');
                      //   continue ;
                     }
                    else{
 				   $stype=$post['subject_type_id4'];
 				   $this->admin_model->add_subject($ayear,$college_id,$course_id,$branch_id,$semister_id,$stype,$post['subject4'],$post['credits4']);
 				   }
-                   echo '<br/><p>Operation Performed Successfully.</p>';
+                   echo showBigSuccess('<p>Operation Performed Successfully.</p>');
 		 }
 		if((isset($post['subject5']))&&(isset($post['credits5'])))
 		 {
 		 		 
 		 if($this->admin_model->check_subject_name1($post['subject5'],$college_id,$course_id,$branch_id,$semister_id)){
-                        echo '<br/><div class="error">Subject Name already exists for this Semester, Branch, Course in the College.</div>';
+                        echo showBigError('<div class="">Subject Name already exists for this Semester, Branch, Course in the College.</div>');
                        
                     }else if($this->admin_model->check_subject_count_exceded1($college_id,$course_id,$branch_id,$semister_id)){ // Not checking if updating to InActive
-                        echo '<br/><div class="error">Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>';
+                        echo showBigError('<div class="">Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>');
                      //   continue ;
                     }
                    else{
 				   $stype=$post['subject_type_id5'];
 				   $this->admin_model->add_subject($ayear,$college_id,$course_id,$branch_id,$semister_id,$stype,$post['subject5'],$post['credits5']);
 				   }
-                   echo '<br/><p>Operation Performed Successfully.</p>';
+                   echo showBigSuccess('<p>Operation Performed Successfully.</p>');
 		 }
 		if((isset($post['subject6']))&&(isset($post['credits6'])))
 		 {
 		 		 //echo $post['subject2'].'-'.$post['credits2'];
 		 if($this->admin_model->check_subject_name1($post['subject6'],$college_id,$course_id,$branch_id,$semister_id)){
-                        echo '<br/><div class="error">Subject Name already exists for this Semester, Branch, Course in the College.</div>';
+                        echo showBigError('<div >Subject Name already exists for this Semester, Branch, Course in the College.</div>');
                        
                     }else if($this->admin_model->check_subject_count_exceded1($college_id,$course_id,$branch_id,$semister_id)){ // Not checking if updating to InActive
-                        echo '<br/><div class="error">Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>';
+                        echo showBigError('<div >Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>');
                      //   continue ;
                     }
                    else{
 				   $stype=$post['subject_type_id6'];
 				   $this->admin_model->add_subject($ayear,$college_id,$course_id,$branch_id,$semister_id,$stype,$post['subject6'],$post['credits6']);
 				   }
-                   echo '<br/><p>Operation Performed Successfully.</p>';
+                   echo showBigSuccess('<p>Operation Performed Successfully.</p>');
 		 }
 		if((isset($post['subject7']))&&(isset($post['credits7'])))
 		 {
 		 		 //echo $post['subject2'].'-'.$post['credits2'];
 		 if($this->admin_model->check_subject_name1($post['subject7'],$college_id,$course_id,$branch_id,$semister_id)){
-                        echo '<br/><div class="error">Subject Name already exists for this Semester, Branch, Course in the College.</div>';
+                        echo showBigError('<div >Subject Name already exists for this Semester, Branch, Course in the College.</div>');
                        
                     }else if($this->admin_model->check_subject_count_exceded1($college_id,$course_id,$branch_id,$semister_id)){ // Not checking if updating to InActive
-                        echo '<br/><div class="error">Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>';
+                        echo showBigError('<div >Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>');
                      //   continue ;
                     }
                    else{
 				   $stype=$post['subject_type_id7'];
 				   $this->admin_model->add_subject($ayear,$college_id,$course_id,$branch_id,$semister_id,$stype,$post['subject7'],$post['credits7']);
 				   }
-                   echo '<br/><p>Operation Performed Successfully.</p>';
+                   echo showBigSuccess('<p>Operation Performed Successfully.</p>');
 		 }
 		if((isset($post['subject8']))&&(isset($post['credits8'])))
 		 {
 		 		 //echo $post['subject2'].'-'.$post['credits2'];
 		 if($this->admin_model->check_subject_name1($post['subject8'],$college_id,$course_id,$branch_id,$semister_id)){
-                        echo '<br/><div class="error">Subject Name already exists for this Semester, Branch, Course in the College.</div>';
+                        echo showBigError('<div >Subject Name already exists for this Semester, Branch, Course in the College.</div>');
                        
                     }else if($this->admin_model->check_subject_count_exceded1($college_id,$course_id,$branch_id,$semister_id)){ // Not checking if updating to InActive
-                        echo '<br/><div class="error">Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>';
+                        echo showBigError('<div >Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>');
                      //   continue ;
                     }
                    else{
 				   $stype=$post['subject_type_id8'];
 				   $this->admin_model->add_subject($ayear,$college_id,$course_id,$branch_id,$semister_id,$stype,$post['subject8'],$post['credits8']);
 				   }
-                   echo '<br/><p>Operation Performed Successfully.</p>';
+                   echo showBigSuccess('<p>Operation Performed Successfully.</p>');
 		 }
 		if((isset($post['subject9']))&&(isset($post['credits9'])))
 		 {
 		 		 //echo $post['subject2'].'-'.$post['credits2'];
 		 if($this->admin_model->check_subject_name1($post['subject9'],$college_id,$course_id,$branch_id,$semister_id)){
-                        echo '<br/><div class="error">Subject Name already exists for this Semester, Branch, Course in the College.</div>';
+                        echo showBigError('<div >Subject Name already exists for this Semester, Branch, Course in the College.</div>');
                        
                     }else if($this->admin_model->check_subject_count_exceded1($college_id,$course_id,$branch_id,$semister_id)){ // Not checking if updating to InActive
-                        echo '<br/><div class="error">Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>';
+                        echo showBigError('<div >Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>');
                      //   continue ;
                     }
                    else{
 				   $stype=$post['subject_type_id9'];
 				   $this->admin_model->add_subject($ayear,$college_id,$course_id,$branch_id,$semister_id,$stype,$post['subject9'],$post['credits9']);
 				   }
-                   echo '<br/><p>Operation Performed Successfully.</p>';
+                   echo showBigSuccess('<p>Operation Performed Successfully.</p>');
 		 }
 		if((isset($post['subject10']))&&(isset($post['credits10'])))
 		 {
 		 		 //echo $post['subject2'].'-'.$post['credits2'];
 		 if($this->admin_model->check_subject_name1($post['subject10'],$college_id,$course_id,$branch_id,$semister_id)){
-                        echo '<br/><div class="error">Subject Name already exists for this Semester, Branch, Course in the College.</div>';
+                        echo showBigError('<div >Subject Name already exists for this Semester, Branch, Course in the College.</div>');
                        
                     }else if($this->admin_model->check_subject_count_exceded1($college_id,$course_id,$branch_id,$semister_id)){ // Not checking if updating to InActive
-                        echo '<br/><div class="error">Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>';
+                        echo showBigError('<div >Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>');
                      //   continue ;
                     }
                    else{
 				   $stype=$post['subject_type_id10'];
 				   $this->admin_model->add_subject($ayear,$college_id,$course_id,$branch_id,$semister_id,$stype,$post['subject10'],$post['credits10']);
 				   }
-                   echo '<br/><p>Operation Performed Successfully.</p>';
+                   echo showBigSuccess('<p>Operation Performed Successfully.</p>');
 		 }
 		 if((isset($post['subject11']))&&(isset($post['credits11'])))
 		 {
 		 		 //echo $post['subject2'].'-'.$post['credits2'];
 		 if($this->admin_model->check_subject_name1($post['subject11'],$college_id,$course_id,$branch_id,$semister_id)){
-                        echo '<br/><div class="error">Subject Name already exists for this Semester, Branch, Course in the College.</div>';
+                        echo showBigError('<div >Subject Name already exists for this Semester, Branch, Course in the College.</div>');
                        
                     }else if($this->admin_model->check_subject_count_exceded1($college_id,$course_id,$branch_id,$semister_id)){ // Not checking if updating to InActive
-                        echo '<br/><div class="error">Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>';
+                        echo showBigError('<div >Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>');
                      //   continue ;
                     }
                    else{
 				   $stype=$post['subject_type_id11'];
 				   $this->admin_model->add_subject($ayear,$college_id,$course_id,$branch_id,$semister_id,$stype,$post['subject11'],$post['credits11']);
 				   }
-                   echo '<br/><p>Operation Performed Successfully.</p>';
+                   echo showBigSuccess('<p>Operation Performed Successfully.</p>');
 		 }
 		 if((isset($post['subject12']))&&(isset($post['credits12'])))
 		 {
 		 		 //echo $post['subject2'].'-'.$post['credits2'];
 		 if($this->admin_model->check_subject_name1($post['subject12'],$college_id,$course_id,$branch_id,$semister_id)){
-                        echo '<br/><div class="error">Subject Name already exists for this Semester, Branch, Course in the College.</div>';
+                        echo showBigError('<div >Subject Name already exists for this Semester, Branch, Course in the College.</div>');
                        
                     }else if($this->admin_model->check_subject_count_exceded1($college_id,$course_id,$branch_id,$semister_id)){ // Not checking if updating to InActive
-                        echo '<br/><div class="error">Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>';
+                        echo showBigError('<div >Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>');
                      //   continue ;
                     }
                    else{
 				   $stype=$post['subject_type_id12'];
 				   $this->admin_model->add_subject($ayear,$college_id,$course_id,$branch_id,$semister_id,$stype,$post['subject12'],$post['credits12']);
 				   }
-                   echo '<br/><p>Operation Performed Successfully.</p>';
+                   echo showBigSuccess('<p>Operation Performed Successfully.</p>');
 		 }
 		 if((isset($post['subject13']))&&(isset($post['credits13'])))
 		 {
 		 		 //echo $post['subject2'].'-'.$post['credits2'];
 		 if($this->admin_model->check_subject_name1($post['subject13'],$college_id,$course_id,$branch_id,$semister_id)){
-                        echo '<br/><div class="error">Subject Name already exists for this Semester, Branch, Course in the College.</div>';
+                        echo showBigError('<div >Subject Name already exists for this Semester, Branch, Course in the College.</div>');
                        
                     }else if($this->admin_model->check_subject_count_exceded1($college_id,$course_id,$branch_id,$semister_id)){ // Not checking if updating to InActive
-                        echo '<br/><div class="error">Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>';
+                        echo showBigError('<div >Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>');
                      //   continue ;
                     }
                    else{
 				   $stype=$post['subject_type_id13'];
 				   $this->admin_model->add_subject($ayear,$college_id,$course_id,$branch_id,$semister_id,$stype,$post['subject13'],$post['credits13']);
 				   }
-                   echo '<br/><p>Operation Performed Successfully.</p>';
+                   echo showBigSuccess('<p>Operation Performed Successfully.</p>');
 		 }
 		 if((isset($post['subject14']))&&(isset($post['credits14'])))
 		 {
 		 		 //echo $post['subject2'].'-'.$post['credits2'];
 		 if($this->admin_model->check_subject_name1($post['subject14'],$college_id,$course_id,$branch_id,$semister_id)){
-                        echo '<br/><div class="error">Subject Name already exists for this Semester, Branch, Course in the College.</div>';
+                        echo showBigError('<div >Subject Name already exists for this Semester, Branch, Course in the College.</div>');
                        
                     }else if($this->admin_model->check_subject_count_exceded1($college_id,$course_id,$branch_id,$semister_id)){ // Not checking if updating to InActive
-                        echo '<br/><div class="error">Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>';
+                        echo showBigError('<div >Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>');
                      //   continue ;
                     }
                    else{
 				   $stype=$post['subject_type_id14'];
 				   $this->admin_model->add_subject($ayear,$college_id,$course_id,$branch_id,$semister_id,$stype,$post['subject14'],$post['credits14']);
 				   }
-                   echo '<br/><p>Operation Performed Successfully.</p>';
+                   echo showBigSuccess('<p>Operation Performed Successfully.</p>');
 		 }
 		 if((isset($post['subject15']))&&(isset($post['credits15'])))
 		 {
 		 		 //echo $post['subject2'].'-'.$post['credits2'];
 		 if($this->admin_model->check_subject_name1($post['subject15'],$college_id,$course_id,$branch_id,$semister_id)){
-                        echo '<br/><div class="error">Subject Name already exists for this Semester, Branch, Course in the College.</div>';
+                        echo showBigError('<div >Subject Name already exists for this Semester, Branch, Course in the College.</div>');
                        
                     }else if($this->admin_model->check_subject_count_exceded1($college_id,$course_id,$branch_id,$semister_id)){ // Not checking if updating to InActive
-                        echo '<br/><div class="error">Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>';
+                        echo showBigError('<div >Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>');
                      //   continue ;
                     }
                    else{
 				   $stype=$post['subject_type_id15'];
 				   $this->admin_model->add_subject($ayear,$college_id,$course_id,$branch_id,$semister_id,$stype,$post['subject15'],$post['credits15']);
 				   }
-                   echo '<br/><p>Operation Performed Successfully.</p>';
+                   echo showBigSuccess('<p>Operation Performed Successfully.</p>');
 		 }
 		 if((isset($post['subject16']))&&(isset($post['credits16'])))
 		 {
 		 		 //echo $post['subject2'].'-'.$post['credits2'];
 		 if($this->admin_model->check_subject_name1($post['subject16'],$college_id,$course_id,$branch_id,$semister_id)){
-                        echo '<br/><div class="error">Subject Name already exists for this Semester, Branch, Course in the College.</div>';
+                        echo showBigError('<div >Subject Name already exists for this Semester, Branch, Course in the College.</div>');
                        
                     }else if($this->admin_model->check_subject_count_exceded1($college_id,$course_id,$branch_id,$semister_id)){ // Not checking if updating to InActive
-                        echo '<br/><div class="error">Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>';
+                        echo showBigError('<div >Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>');
                      //   continue ;
                     }
                    else{
 				   $stype=$post['subject_type_id16'];
 				   $this->admin_model->add_subject($ayear,$college_id,$course_id,$branch_id,$semister_id,$stype,$post['subject16'],$post['credits16']);
 				   }
-                   echo '<br/><p>Operation Performed Successfully.</p>';
+                   echo showBigSuccess('<p>Operation Performed Successfully.</p>');
 		 }
 		 if((isset($post['subject17']))&&(isset($post['credits17'])))
 		 {
 		 		 //echo $post['subject2'].'-'.$post['credits2'];
 		 if($this->admin_model->check_subject_name1($post['subject17'],$college_id,$course_id,$branch_id,$semister_id)){
-                        echo '<br/><div class="error">Subject Name already exists for this Semester, Branch, Course in the College.</div>';
+                        echo showBigError('<div >Subject Name already exists for this Semester, Branch, Course in the College.</div>');
                        
                     }else if($this->admin_model->check_subject_count_exceded1($college_id,$course_id,$branch_id,$semister_id)){ // Not checking if updating to InActive
-                        echo '<br/><div class="error">Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>';
+                        echo showBigError('<div >Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>');
                      //   continue ;
                     }
                    else{
 				   $stype=$post['subject_type_id17'];
 				   $this->admin_model->add_subject($ayear,$college_id,$course_id,$branch_id,$semister_id,$stype,$post['subject17'],$post['credits17']);
 				   }
-                   echo '<br/><p>Operation Performed Successfully.</p>';
+                   echo showBigSuccess('<p>Operation Performed Successfully.</p>');
 		 }
 		 if((isset($post['subject18']))&&(isset($post['credits18'])))
 		 {
 		 		 //echo $post['subject2'].'-'.$post['credits2'];
 		 if($this->admin_model->check_subject_name1($post['subject18'],$college_id,$course_id,$branch_id,$semister_id)){
-                        echo '<br/><div class="error">Subject Name already exists for this Semester, Branch, Course in the College.</div>';
+                        echo showBigError('<div >Subject Name already exists for this Semester, Branch, Course in the College.</div>');
                        
                     }else if($this->admin_model->check_subject_count_exceded1($college_id,$course_id,$branch_id,$semister_id)){ // Not checking if updating to InActive
-                        echo '<br/><div class="error">Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>';
+                        echo showBigError('<div >Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>');
                      //   continue ;
                     }
                    else{
 				   $stype=$post['subject_type_id18'];
 				   $this->admin_model->add_subject($ayear,$college_id,$course_id,$branch_id,$semister_id,$stype,$post['subject18'],$post['credits18']);
 				   }
-                   echo '<br/><p>Operation Performed Successfully.</p>';
+                   echo showBigSuccess('<p>Operation Performed Successfully.</p>');
 		 }
 		 if((isset($post['subject19']))&&(isset($post['credits19'])))
 		 {
 		 		 //echo $post['subject2'].'-'.$post['credits2'];
 		 if($this->admin_model->check_subject_name1($post['subject19'],$college_id,$course_id,$branch_id,$semister_id)){
-                        echo '<br/><div class="error">Subject Name already exists for this Semester, Branch, Course in the College.</div>';
+                        echo showBigError('<div >Subject Name already exists for this Semester, Branch, Course in the College.</div>');
                        
                     }else if($this->admin_model->check_subject_count_exceded1($college_id,$course_id,$branch_id,$semister_id)){ // Not checking if updating to InActive
-                        echo '<br/><div class="error">Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>';
+                        echo showBigError('<div >Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>');
                      //   continue ;
                     }
                    else{
 				   $stype=$post['subject_type_id19'];
 				   $this->admin_model->add_subject($ayear,$college_id,$course_id,$branch_id,$semister_id,$stype,$post['subject19'],$post['credits19']);
 				   }
-                   echo '<br/><p>Operation Performed Successfully.</p>';
+                   echo showBigSuccess('<p>Operation Performed Successfully.</p>');
 		 }
 		 if((isset($post['subject20']))&&(isset($post['credits20'])))
 		 {
 		 		 //echo $post['subject2'].'-'.$post['credits2'];
 		 if($this->admin_model->check_subject_name1($post['subject20'],$college_id,$course_id,$branch_id,$semister_id)){
-                        echo '<br/><div class="error">Subject Name already exists for this Semester, Branch, Course in the College.</div>';
+                        echo showBigError('<div >Subject Name already exists for this Semester, Branch, Course in the College.</div>');
                        
                     }else if($this->admin_model->check_subject_count_exceded1($college_id,$course_id,$branch_id,$semister_id)){ // Not checking if updating to InActive
-                        echo '<br/><div class="error">Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>';
+                        echo showBigError('<div >Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>');
                      //   continue ;
                     }
                    else{
 				   $stype=$post['subject_type_id20'];
 				   $this->admin_model->add_subject($ayear,$college_id,$course_id,$branch_id,$semister_id,$stype,$post['subject20'],$post['credits20']);
 				   }
-                   echo '<br/><p>Operation Performed Successfully.</p>';
+                   echo showBigSuccess('<p>Operation Performed Successfully.</p>');
 		 }
 
 		 
@@ -2438,10 +2438,10 @@ $result="<a href='javascript:void(0);' onclick='javascript:result_polls(".$v['id
                 if(!empty($v)){
                     $post['name']=$v;
                     if($this->admin_model->check_subject_name($post)){
-                        echo '<br/><div class="error">Subject Name '.$v.' already exists for this Semester, Branch, Course in the College.</div>';
+                        echo '<br/><div >Subject Name '.$v.' already exists for this Semester, Branch, Course in the College.</div>';
                         continue ;
                     }else if($this->admin_model->check_subject_count_exceded($post) && $post['status']!='0'){ // Not checking if updating to InActive
-                        echo '<br/><div class="error">Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>';
+                        echo '<br/><div >Only 10 Subjects can be added to a Semesters, Branch, Course in a College.</div>';
                         continue ;
                     }
                     $this->my_db_lib->save_record($post,'subjects');
@@ -2508,7 +2508,7 @@ $result="<a href='javascript:void(0);' onclick='javascript:result_polls(".$v['id
         if($post){
             $id=$post['id'];
             $this->admin_model->delete_period_cycles($id);
-            echo '<br/><div class="error">Period Cycles Deleted.</div><a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
+            echo showBigSuccess('<div >Period Cycles Deleted.</div>'); // <a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
         }
     }
 
@@ -2517,7 +2517,7 @@ $result="<a href='javascript:void(0);' onclick='javascript:result_polls(".$v['id
         $post=$this->input->post();
         if($post){
             if($this->admin_model->check_period_cycles_name($post)){
-                echo '<br/><div class="error">Cycle Name '.$post['name'].' already exists for this College.</div>';
+                echo showBigError('<div >Cycle Name '.$post['name'].' already exists for this College.</div>');
                 return ;
             }
             $newId=$this->my_db_lib->save_record($post,'period_cycles');
@@ -2538,7 +2538,7 @@ $result="<a href='javascript:void(0);' onclick='javascript:result_polls(".$v['id
                 }
                 redirect('admin/edit_periods/'.$newId);
             }else{
-            echo '<br/><p>Period Cycle '.$post['name'].' Saved Successfully.</p>';
+            echo showBigSuccess('<p>Period Cycle '.$post['name'].' Saved Successfully.</p>');
             echo '<br/><a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
             }
             
@@ -2556,7 +2556,7 @@ $result="<a href='javascript:void(0);' onclick='javascript:result_polls(".$v['id
                     $periods_post['id']=$key;
                     $this->my_db_lib->save_record($periods_post,'periods');
                 }
-                echo '<br/><p>Periods for the Period Cycle Saved Successfully.</p>';
+                echo showBigSuccess('<p>Periods for the Period Cycle Saved Successfully.</p>');
                 echo '<br/><a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
             }else{
                 $cycle_data=$this->admin_model->get_period_cycle($cycles_id);
@@ -2726,21 +2726,21 @@ $result="<a href='javascript:void(0);' onclick='javascript:result_polls(".$v['id
         if($this->input->post()){
             $post=$this->input->post();
             if($this->admin_model->checkAttendanceCollision($post)){
-                echo '<br/><div class="error">Subject already allotted for the same period.</div>
-                    <br/><input type="button" name="imageField" id="imageField" class="send button" value="Back" onclick="javascript:window.location.reload();"/>';
+                echo showBigError('<div >Subject already allotted for the same period.</div>');
+                    // <br/><input type="button" name="imageField" id="imageField" class="send button" value="Back" onclick="javascript:window.location.reload();"/>';
                 return true;
             }
             $cycleTimeCollisions=$this->admin_model->checkCycleTimingCollision($post);
             if(!empty($cycleTimeCollisions)){
-                echo '<br/><div class="error">Period Timings might Collide with the other allotted period in the Cycle -- '.$cycleTimeCollisions[0]['cycle_name'].' - '.$cycleTimeCollisions[0]['period_label'].' - '.$cycleTimeCollisions[0]['time_label'].'.</div>
-                    <br/><input type="button" name="imageField" id="imageField" class="send button" value="Back" onclick="javascript:window.location.reload();"/>';
+                echo showBigError('<div >Period Timings might Collide with the other allotted period in the Cycle -- '.$cycleTimeCollisions[0]['cycle_name'].' - '.$cycleTimeCollisions[0]['period_label'].' - '.$cycleTimeCollisions[0]['time_label'].'.</div>');
+                    // <br/><input type="button" name="imageField" id="imageField" class="send button" value="Back" onclick="javascript:window.location.reload();"/>';
                 return true;
             }
             /*echo '<pre>';
             print_r($post); exit;*/
             $this->my_db_lib->save_record($post,'staff_cycles_periods');
-            echo '<br/><p>Subject saved to period Successfully.</p>
-                    <br/><input type="button" name="imageField" id="imageField" class="send button" value="Back" onclick="javascript:window.location.reload();"/>';
+            echo showBigSuccess('<p>Subject saved to period Successfully.</p>'); 
+                   //  <br/><input type="button" name="imageField" id="imageField" class="send button" value="Back" onclick="javascript:window.location.reload();"/>';
         }
     }
   
@@ -2843,7 +2843,7 @@ $result="<a href='javascript:void(0);' onclick='javascript:result_polls(".$v['id
 					$this->admin_model->section_Save($data);
 					//Admin::section_management();
 					//redirect('admin/section_management','refresh');
-					echo '<br/><div class="error">Section Inserted Successfully.</div><a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
+					echo showBigSuccess('<div >Section Inserted Successfully.</div>'); // <a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
 					
 		
 	} 
@@ -2862,7 +2862,7 @@ $result="<a href='javascript:void(0);' onclick='javascript:result_polls(".$v['id
         if($post){
             $id=$post['id'];
             $this->admin_model->delete_section($id);
-            echo '<br/><div class="error">Section Deleted.</div><a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
+            echo showBigSuccess('<div >Section Deleted.</div>'); // <a href="javascript:void(0);" onclick="javascript:window.location.reload();"> <br/> << Back To List</a>';
         }
     }
 

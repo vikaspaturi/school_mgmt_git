@@ -27,9 +27,9 @@ class Library extends CI_Controller {
             $post=$this->input->post();
             $result=$this->my_db_lib->save_record($post,'library_books');
             if($result){
-                echo '<p> Book Saved Successfully.</p>';
+                echo showBigSuccess('<p> Book Saved Successfully.</p>');
             }else{
-                echo '<p> Problem Saving book. please try again.</p>';
+                echo showBigSuccess('<p> Problem Saving book. please try again.</p>');
             }
 
         }
@@ -43,7 +43,7 @@ class Library extends CI_Controller {
     function delete_book(){
         if($this->input->post('unique_number')){
             if($this->library_model->check_if_reserved($this->input->post('unique_number'))){
-                echo '<br/>Book is reserved. Cannot update/delete a reserved book.';
+                echo showBigError('Book is reserved. Cannot update/delete a reserved book.');
                 return true;
             }
             $post=$this->input->post();
@@ -59,16 +59,16 @@ class Library extends CI_Controller {
         if($this->input->post('id')){
             $post=$this->input->post();
             $this->library_model->delete_book($post['id']);
-            echo '<p>Book Deleted Succesfully.</p>';
+            echo showBigSuccess('<p>Book Deleted Succesfully.</p>');
         }else{
-            echo '<p>Problem deleting Book.</p>';
+            echo showBigError('<p>Problem deleting Book.</p>');
         }
     }
 
     function update_book(){
         if($this->input->post('unique_number')){
             if($this->library_model->check_if_reserved($this->input->post('unique_number'))){
-                echo '<br/>Book is reserved. Cannot update/delete a reserved book.';
+                echo showBigInfo('Book is reserved. Cannot update/delete a reserved book.');
                 return true;
             }
             $post=$this->input->post();
@@ -261,11 +261,11 @@ class Library extends CI_Controller {
             // Check number of books booked
             $number_of_books_reserved=$this->library_model->get_booking_count($user_id);
             if($number_of_books_reserved>=3){
-                echo 'You can only book/hold 3 books at a time.';
+                echo showBigInfo('You can only book/hold 3 books at a time.');
                 return true;
             }
             if($this->library_model->check_book_reserved($post)){ // Putting this in case 2 users reserve a book simultaniously from diff browsers
-                echo 'Problem in reserving book. Please try again.';
+                echo showBigError('Problem in reserving book. Please try again.');
             }else{
                 $res_post['user_id']=$post['user_id'];
                 $res_post['book_id']=$post['id'];
@@ -275,7 +275,7 @@ class Library extends CI_Controller {
                 //print_r();
               //  echo $result."/Testing/".print_r($email_mobile,true);
 				if($result){
-                    $msg='Your book is reserved.  Please Collect the Book from the Library within 48 hours.  Your return date is '.date('d-M-Y',strtotime(date("Y-m-d")." +2 week")).'.';
+                    $msg=showBigSuccess('Your book is reserved.  Please Collect the Book from the Library within 48 hours.  Your return date is '.date('d-M-Y',strtotime(date("Y-m-d")." +2 week")).'.');
 					//$this->db->query("insert into debug (name) values ('".$msg.$email_mobile['mobile']."')");
                     $this->sms_lib->send_sms($email_mobile['mobile'],$msg);
 					
@@ -283,7 +283,7 @@ class Library extends CI_Controller {
                 }
             }
          }else{
-             echo 'Please try again';
+             echo showBigError('Please try again');
          }
      }
 

@@ -82,7 +82,7 @@
             </select>
         </li>-->
         <li>
-            <input type="button" name="imageField" id="imageField" class="send button j_gen_form_submit" value="Save Period Subject" />
+            <input type="button" name="imageField" id="imageField" class="gblue button j_gen_form_submit" value="Save Period Subject" />
             <div class="clr"></div>
         </li>
     </ol>

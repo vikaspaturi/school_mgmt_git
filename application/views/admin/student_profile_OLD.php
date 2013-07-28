@@ -21,7 +21,7 @@
             <input id="name" name="name" class="text"/>
         </li>
         <li>
-            <input type="button" name="imageField" id="imageField" class="send button j_gen_form_submit" value="Give In" />
+            <input type="button" name="imageField" id="imageField" class="gblue button j_gen_form_submit" value="Give In" />
             <div class="clr"></div>
         </li>
     </ol>

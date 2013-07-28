@@ -21,7 +21,7 @@
             <span id="error_placement"></span>
         </li>
         <li>
-            <input type="button" class="send button j_gen_form_submit" value="Get Data"/><br />
+            <input type="button" class="gblue button j_gen_form_submit" value="Get Data"/><br />
         </li>
     </ol>
 </form>

@@ -31,7 +31,7 @@ class Email extends CI_Controller {
                 $file_arr=false;
             }
             $this->mail_file($post['to'],'noreply@mycollege.goendeavor.com',$post['subject'],$post['message'],$file_arr);
-            echo '<br/><p>E-Mail Sent.</p>';
+            echo showBigSuccess('<p>E-Mail Sent.</p>');
         }
     }
 

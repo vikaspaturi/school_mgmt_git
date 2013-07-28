@@ -21,7 +21,7 @@
             </select>
         </li>
         <li>
-            <input type="submit" name="imageField" id="imageField" class="send button j_gen_form_submit" value="Save Admission Year" />
+            <input type="submit" name="imageField" id="imageField" class="gblue button j_gen_form_submit" value="Save Admission Year" />
             <div class="clr"></div>
         </li>
     </ol>

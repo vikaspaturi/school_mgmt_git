@@ -55,7 +55,7 @@
 	  		</select>
 			</li>
 			<li>
-                <input type="submit" name="submit"  class="send button " value="Search"/>
+                <input type="submit" name="submit"  class=" button gblue" value="Search"/>
                 <div class="clr"></div>
             </li></ol>
     </form>

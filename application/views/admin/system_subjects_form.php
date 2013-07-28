@@ -17,7 +17,7 @@
             <input class="text" type="text" name="name" value="<?php if(isset($s_data['name'])) echo $s_data['name']; ?>"/>
         </li>
         <li>
-            <input type="button" name="imageField" id="imageField" class="send button j_gen_form_submit" value="Save Subject" />
+            <input type="button" name="imageField" id="imageField" class="gblue button j_gen_form_submit" value="Save Subject" />
             <div class="clr"></div>
         </li>
     </ol>

@@ -117,7 +117,7 @@ class Book_keeper extends CI_Controller {
             $id=$post['id'];
             $sql="update library_booking set status='0' where id='$id'";
             $this->db->query($sql);
-            echo 'Book Received.';
+            echo showBigSuccess('Book Received.');
         }
     }
     function pass_on_books(){
@@ -128,15 +128,15 @@ class Book_keeper extends CI_Controller {
             $book_id=$this->library_model->get_book_id($book_number);
             $user_id=$this->library_model->get_student_user_id($student_number);
             if($this->library_model->check_if_reserved($this->input->post('book_number'))){
-                echo '<br/><div class="error">Book is reserved. Cannot pass on a reserved book.</div>';
+                echo showBigError('<div>Book is reserved. Cannot pass on a reserved book.</div>');
                 return true;
             }
             if(empty($book_id)){
-                echo '<br/><div class="error">Book not found. Please check the book number.</div>';
+                echo showBigError('<div>Book not found. Please check the book number.</div>');
                 return true;
             }
             if(empty($user_id)){
-                echo '<br/><div class="error">Student not found. Please check the student number.</div>';
+                echo showBigError('<div>Student not found. Please check the student number.</div>');
                 return true;
             }
             if($rec_id=$this->library_model->is_book_reserved($book_id)){
@@ -145,7 +145,7 @@ class Book_keeper extends CI_Controller {
             }else{
                 $this->library_model->reserve_book($book_id,$user_id);
             }
-            echo '<br/><p>Book Passed on successfully</p>';
+            echo showBigSuccess('<p>Book Passed on successfully</p>');
         }else{
             $data['content_page']='book_keeper/pass_on_books';
             $this->load->view('common/base_template',$data);
@@ -258,13 +258,13 @@ class Book_keeper extends CI_Controller {
                 $sql="update library_booking set msg2_sent='1' where id='$id'";
                 $this->db->query($sql);
                 $this->sms_lib->send_sms($post['mobile'],'You have a library book to return. please check.');
-                echo 'Alert message sent';
+                echo showBigSuccess('Alert message sent');
             }else if($post['option']=='collect'){
                 $id=$post['id'];
                 $sql="update library_booking set status='0', msg1_sent='1' where id='$id'";
                 $this->db->query($sql);
                 $this->sms_lib->send_sms($post['mobile'],'Your library book reservation has been cancelled as the duration for collecting the book has exceded.');
-                echo 'Reservation has been cancelled';
+                echo showBigSuccess('Reservation has been cancelled');
             }
             
         }

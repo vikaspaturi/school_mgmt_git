@@ -97,7 +97,7 @@ if(count($data)){
                 <input id="unique_number" name="unique_number" class="text" value="<?php echo $data[0]['unique_number']; ?>"/>
             </li>-->
             <li>
-                <input type="button" class="send button j_gen_form_submit" value="Update the Book"/><br />
+                <input type="button" class="gblue button j_gen_form_submit" value="Update the Book"/><br />
             </li>
         </ol>
     </form>

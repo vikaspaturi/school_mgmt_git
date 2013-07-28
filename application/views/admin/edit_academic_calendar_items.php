@@ -59,15 +59,15 @@
     
     <ol id="add_another_button_box">
         <li>
-            <input type="button" name="" id="add_new_form_box" class="send button " value="Add Another Academic Calendar Item" />
+            <input type="button" name="" id="add_new_form_box" class=" button green" value="Add Another Academic Calendar Item" />
             <div class="clr"></div>
         </li>
     </ol>
     <ol>
         <li>
             <br/><br/>
-            <input type="submit" name="imageField" id="imageField" class="send button " value="Save Academic Calendar " />
-            <input type="button" name="" id="" class="send button " value=" Cancel " style="margin-left: 20px;" onclick="javascript:window.location='<?php echo site_url('admin/academic_calendar'); ?>'"/>
+            <input type="submit" name="imageField" id="imageField" class=" button gblue" value="Save Academic Calendar " />
+            <input type="button" name="" id="" class="send button grey" value=" Cancel " style="margin-left: 20px;" onclick="javascript:window.location='<?php echo site_url('admin/academic_calendar'); ?>'"/>
             <div class="clr"></div>
         </li>
     </ol>

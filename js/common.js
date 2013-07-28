@@ -249,7 +249,11 @@ function change_password(){
         message:$.change_psw_form(),
         width:350,
         height:'auto',
-        dialogClass: "bounceIn",
+        dialogClass: "bounceIn animation_setting",
+        show: {
+            effect: "blind",
+            duration: 1000
+        },
         buttons:
             [{
                 text: "Cancel",

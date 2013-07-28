@@ -8,7 +8,7 @@
             <textarea cols="10" rows="5" name="message" id="message"><?php if(isset($notice_data[0]['message'])) echo $notice_data[0]['message']; ?></textarea>
         </li>
         <li>
-            <input type="button" name="imageField" id="imageField" class="send button gblue j_gen_form_submit" value="Save Message" />
+            <input type="button" name="imageField" id="imageField" class=" button gblue j_gen_form_submit" value="Save Message" />
             <div class="clr"></div>
         </li>
     </ol>

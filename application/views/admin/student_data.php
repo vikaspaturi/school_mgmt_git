@@ -148,7 +148,7 @@
                                     <label for="account">Account Status: </label>
                                     <input id="account" name="account" class="text"/>
                                 </li><li>
-                                    <input type="button" name="imageField" id="imageField" class="send button j_gen_form_submit" value="Save"/>
+                                    <input type="button" name="imageField" id="imageField" class="gblue button j_gen_form_submit" value="Save"/>
                                     <div class="clr"></div>
                                 </li></ol>
                         </form>

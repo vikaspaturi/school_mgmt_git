@@ -18,7 +18,7 @@
             <input id="upload_image" name="upload_image" class="required" value="<?php if(isset($form_data[0]['value'])) echo $form_data[0]['value']; ?>" type="file" title="Please upload a image."/>
         </li>
         <li>
-            <input type="submit" name="imageField" id="imageField" class="send button " value="Save Image" />
+            <input type="submit" name="imageField" id="imageField" class=" button gblue" value="Save Image" />
             <div class="clr"></div>
         </li>
     </ol>

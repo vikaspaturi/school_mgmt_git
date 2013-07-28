@@ -30,8 +30,8 @@ foreach($data as $k=>$v){?>
         <div style="clear:both;"></div>
     </div>
     <br/>
-    <input type="button" name="imageField" id="imageField" class="send button  " value="Back" onclick="javascript:window.location.reload();"/>
-    <input type="button" name="imageField" id="imageField" class="send button  j_gen_form_submit" value="Confirm"/>
+    <input type="button" name="imageField" id="imageField" class="grey button  " value="Back" onclick="javascript:window.location.reload();"/>
+    <input type="button" name="imageField" id="imageField" class="gblue button  j_gen_form_submit" value="Confirm"/>
 </form>
 <?php } }else{?>
 <br/>

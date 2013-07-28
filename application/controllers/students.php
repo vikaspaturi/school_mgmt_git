@@ -34,7 +34,7 @@ class Students extends CI_Controller {
             if($data=$this->session->userdata('preview_id_card')){
                 $this->my_db_lib->save_record($data,'id_card_applications');
                 $this->session->unset_userdata('preview_id_card');
-                echo '<br/><p> ID Card request submitted successfully</p>';
+                echo showBigSuccess('<p> ID Card request submitted successfully</p>');
             }
         }else{
             $data['content_page']='students/id_card';
@@ -58,7 +58,7 @@ class Students extends CI_Controller {
             if($data=$this->session->userdata('preview_study_certificate')){
                 $this->my_db_lib->save_record($data,'study_certi_applications');
                 $this->session->unset_userdata('preview_study_certificate');
-                echo '<br/><p> Study Certificate request submitted successfully</p>';
+                echo showBigSuccess('<p> Study Certificate request submitted successfully</p>');
             }
         }else{
             $data['student_data']=$this->students_model->get_user_details($this->ci_user_id);
@@ -73,7 +73,7 @@ class Students extends CI_Controller {
             $post['user_id']=$this->ci_user_id;
             $data['student_data']=$this->students_model->get_user_details($this->ci_user_id);
             if(empty($data['student_data'])){
-                echo '<br/><div class="error"> Please Fill your profile details in My Record.</div>';
+                echo showBigSuccess('<div class=""> Please Fill your profile details in My Record.</div>');
                 return true;
             }
             // Check if student is 1 Year + in the college.
@@ -81,7 +81,7 @@ class Students extends CI_Controller {
 //            $joining_date=new DateTime($data['student_data'][0]->doj);
 //            $duration=$joining_date->diff($present_date);
 //            if($duration->y<1){
-//                echo '<br/><div class="error"> Study certificates will be issued only after 1 year of joining.</div>';
+//                echo '<br/><div> Study certificates will be issued only after 1 year of joining.</div>';
 //                return true;
 //            }
             $data['student_data']=(array)$data['student_data'][0];
@@ -111,7 +111,7 @@ class Students extends CI_Controller {
             if($data=$this->session->userdata('preview_conduct_certificate')){
                 $this->my_db_lib->save_record($data,'conduct_applications');
                 $this->session->unset_userdata('preview_conduct_certificate');
-                echo '<br/><p> Conduct Certificate request submitted successfully</p>';
+                echo showBigSuccess('<p> Conduct Certificate request submitted successfully</p>');
             }
         }else{
             $data['content_page']='students/conduct_certificate';
@@ -125,13 +125,13 @@ class Students extends CI_Controller {
             $post['user_id']=$this->ci_user_id;
             $result=$this->students_model->check_conduct($this->ci_user_id);
             if($result>0){
-                echo '<br/><div class="error"> You already applied for Conduct Certificate.  Please contact the office for further reference.</div>';
+                echo showBigError('<div> You already applied for Conduct Certificate.  Please contact the office for further reference.</div>');
                 return true;
             }
 
             $data['student_data']=$this->students_model->get_user_details($this->ci_user_id);
             if(empty($data['student_data'])){
-                echo '<br/><div class="error"> Please Fill your profile details in My Record.</div>';
+                echo showBigError('<div> Please Fill your profile details in My Record.</div>');
                 return true;
             }
             $data['student_data']=(array)$data['student_data'][0];
@@ -185,7 +185,7 @@ class Students extends CI_Controller {
             if($data=$this->session->userdata('preview_tc')){
                 $this->my_db_lib->save_record($data,'tc_applications');
                 $this->session->unset_userdata('preview_tc');
-                echo '<br/><p> Transfer Certificate request submitted successfully.</p>';
+                echo showBigSuccess('<p> Transfer Certificate request submitted successfully.</p>');
             }
         }else{
             $data['content_page']='students/transfer_certificate';
@@ -199,13 +199,13 @@ class Students extends CI_Controller {
             $post['user_id']=$this->ci_user_id;
             $result=$this->students_model->check_tc($this->ci_user_id);
             if($result>0){
-                echo '<br/><div class="error"> You already applied for Transfer Certificate.  Please contact the office for further reference.</div>';
+                echo showBigError('<div> You already applied for Transfer Certificate.  Please contact the office for further reference.</div>');
                 return true;
             }
 
             $data['student_data']=$this->students_model->get_user_details($this->ci_user_id);
             if(empty($data['student_data'])){
-                echo '<br/><div class="error"> Please Fill your profile details in My Record.</div>';
+                echo showBigError('<div> Please Fill your profile details in My Record.</div>');
                 return true;
             }
             $data['student_data']=(array)$data['student_data'][0];
@@ -221,7 +221,7 @@ class Students extends CI_Controller {
             if($data=$this->session->userdata('preview_bus_pass')){
                 $this->my_db_lib->save_record($data,'bus_pass_applications');
                 $this->session->unset_userdata('preview_bus_pass');
-                echo '<br/><p> Bus Pass request submitted successfully.</p>';
+                echo showBigSuccess('<p> Bus Pass request submitted successfully.</p>');
             }
         }else{
             $data['content_page']='students/bus_pass';
@@ -490,7 +490,7 @@ if($this->session->userdata('user_id')){
                 $filter_post['doc_link']=$post['doc_link'];
                 $filter_post['student_replies']=$post['student_replies'];
                 $this->my_db_lib->save_record($filter_post,'assignment_submissions');
-                echo '<br/><p>Assignment Submitted Successfully.</p>';
+                echo showBigSuccess('<p>Assignment Submitted Successfully.</p>');
             }else{
                 $view_data['enc_id']=$enc_id;
                 $view_data['content_page']='students/submit_assignment';

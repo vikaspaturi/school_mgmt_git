@@ -17,7 +17,7 @@ foreach($data as $k=>$v){?>
         <pre>ADDRESS			:	<?php echo $v['address']; ?></pre>
         <pre>MOBILE Number		:	<?php echo $v['mobile_no']; ?></pre>
         <br/>
-        <input type="button" name="imageField" id="imageField" class="send button  j_gen_form_submit" value="Print" onclick="this.style.display='none'; window.print();">
+        <input type="button" name="imageField" id="imageField" class="gblue button  j_gen_form_submit" value="Print" onclick="this.style.display='none'; window.print();">
 <!--        <input type="button" name="imageField" id="imageField" class="send button  j_gen_form_submit" value="Generate Card">-->
     </div>
     <div style="clear:both;"></div>
