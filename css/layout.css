@@ -275,8 +275,8 @@ border-radius: 2px;
 	opacity: 1;
 	filter: Alpha(Opacity=100);
 }
-.app .ui-jqgrid tr.jqgrow.ui-state-hover{ border: 1px solid #E0CFC2; background: #FFF9F4}
-.app .ui-jqgrid tr.jqgrow.ui-state-highlight{ background: #FFEED3}
+.app .ui-jqgrid tr.jqgrow.ui-state-hover{ border: 1px solid #E0CFC2; background: #FFFbf7}
+.app .ui-jqgrid tr.jqgrow.ui-state-highlight{ background: #FFF8EC}
 /*End@@code for jgrid design*/
 
 /**start@@code for the college updates*/
